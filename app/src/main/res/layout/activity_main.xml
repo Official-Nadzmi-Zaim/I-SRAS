@@ -9,8 +9,36 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.seladanghijau.i_sras.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <!--Kat sini akan panggil semua view fragment then hide dia dulu-->
+
+    <fragment android:name="com.seladanghijau.i_sras.Fragment.HomeFragment"
+        android:id="@+id/HomeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <fragment android:name="com.seladanghijau.i_sras.Fragment.CommunityFragment"
+        android:id="@+id/CommunityFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <fragment android:name="com.seladanghijau.i_sras.Fragment.WorkplaceFragment"
+        android:id="@+id/WorkplaceFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <fragment android:name="com.seladanghijau.i_sras.Fragment.EnvironmentFragment"
+        android:id="@+id/EnvironmentFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <fragment android:name="com.seladanghijau.i_sras.Fragment.MarketplaceFragment"
+        android:id="@+id/MarketplaceFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <fragment android:name="com.seladanghijau.i_sras.Fragment.ReportFragment"
+        android:id="@+id/ReportFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </RelativeLayout>
