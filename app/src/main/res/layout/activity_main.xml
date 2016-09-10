@@ -10,6 +10,7 @@
     tools:context="com.seladanghijau.i_sras.MainActivity">
 
     <!--Kat sini akan panggil semua view fragment then hide dia dulu-->
+    <!--Fragment-->
 
     <fragment android:name="com.seladanghijau.i_sras.Fragment.HomeFragment"
         android:id="@+id/HomeFragment"
