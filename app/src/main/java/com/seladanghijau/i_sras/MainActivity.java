@@ -30,6 +30,5 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.hide(marketplaceFragment);
         fragmentTransaction.hide(reportFragment);
         fragmentTransaction.commit();
-        //done commit
     }
 }
