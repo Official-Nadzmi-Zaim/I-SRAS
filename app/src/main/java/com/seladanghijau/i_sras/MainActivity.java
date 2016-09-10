@@ -8,6 +8,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        // try saja 3
+        // try saja 2
     }
 }
