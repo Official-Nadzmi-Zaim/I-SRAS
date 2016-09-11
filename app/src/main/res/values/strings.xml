@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">I-SRAS</string>
+    <string name="home">
+        <b>WELCOME TO ISLAMIC SOCIAL</b>\n
+        <b>RESPONSIBILITY ASSESSMENT SYSTEM</b>\n
+        <b>(I-SRAS)</b>
+    </string>
+    <string name="home2">
+        The Islamic Social Responsibility Assessment System (I-SRAS) is developed to provide an assessment for Islamic-based organizations as self-check tool of their social responsibility-related programmes, activities and initiatives. This tool aims to ensure that all social responsibility practices undertaken are prioritized and in conformance with the Islamic laws (Shariah).
+    </string>
+    <string name="home3">
+        I-SRAS contains two primary form of assessment, which include: \n
+        \n
+        1. An assessment of the current sosial responsibility conformance to i-CSR best practice social responsibility guidelines for Islamic organizations.\n\n
+        2. An outline of suggested actions required to address deficiencies identified by the system during the assessment.
+    </string>
+    <string name="start">Start</string>
 </resources>
