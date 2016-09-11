@@ -28,4 +28,8 @@
     <string name="marketplace">MARKETPLACE</string>
     <string name="options">Select the options below to edit your score</string>
     <string name="image">image</string>
+    <string name="i_sras_score">I-SRAS SCORE</string>
+    <string name="vital">VITAL</string>
+    <string name="recommended">RECOMMENDED</string>
+    <string name="done">DONE</string>
 </resources>

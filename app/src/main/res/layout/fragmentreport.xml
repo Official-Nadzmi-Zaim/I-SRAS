@@ -154,6 +154,124 @@
 
         </TableLayout>
 
+        <TableLayout
+            android:layout_margin="20dp"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:padding="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/orange"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/i_sras_score"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:id="@+id/IrasScore"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:id="@+id/IrasScoreLevel"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:padding="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/orange"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/vital"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:id="@+id/VitalScore"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:id="@+id/VitalScoreLevel"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:padding="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/orange"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/recommended"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:id="@+id/RecommendedScore"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:id="@+id/RecommendedScoreLevel"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+        </TableLayout>
+
         <TextView
             android:gravity="center"
             android:padding="5dp"
@@ -260,5 +378,15 @@
                 </LinearLayout>
             </TableRow>
         </TableLayout>
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btnDone"
+            android:background="@drawable/btnhome"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:text="@string/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>
