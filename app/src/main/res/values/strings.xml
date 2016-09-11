@@ -15,4 +15,17 @@
         2. An outline of suggested actions required to address deficiencies identified by the system during the assessment.
     </string>
     <string name="start">Start</string>
+    <string name="i_sras">I-SRAS SCORE REPORT</string>
+    <string name="score">SCORE</string>
+    <string name="full_score">FULL SCORE</string>
+    <string name="community">COMMUNITY</string>
+    <string name="_44">44</string>
+    <string name="workplace">WORKPLACE</string>
+    <string name="_75">75</string>
+    <string name="enviromental">ENVIROMENTAL</string>
+    <string name="_33">33</string>
+    <string name="_34">34</string>
+    <string name="marketplace">MARKETPLACE</string>
+    <string name="options">Select the options below to edit your score</string>
+    <string name="image">image</string>
 </resources>
