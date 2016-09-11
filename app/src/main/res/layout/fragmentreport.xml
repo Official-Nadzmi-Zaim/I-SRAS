@@ -181,6 +181,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:contentDescription="@string/image"
                         android:src="@drawable/community"
                         android:layout_width="50dp"
                         android:layout_height="50dp" />
@@ -200,6 +201,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:contentDescription="@string/image"
                         android:src="@drawable/worplace"
                         android:layout_width="50dp"
                         android:layout_height="50dp" />
@@ -225,6 +227,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:contentDescription="@string/image"
                         android:src="@drawable/environment"
                         android:layout_width="50dp"
                         android:layout_height="50dp" />
@@ -244,6 +247,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:contentDescription="@string/image"
                         android:src="@drawable/market"
                         android:layout_width="50dp"
                         android:layout_height="50dp" />
