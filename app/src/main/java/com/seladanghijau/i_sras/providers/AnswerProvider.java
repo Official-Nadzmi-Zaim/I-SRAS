@@ -1,6 +1,6 @@
-package com.seladanghijau.i_sras.provider;
+package com.seladanghijau.i_sras.providers;
 
-import com.seladanghijau.i_sras.dto.Answer;
+import com.seladanghijau.i_sras.dtos.Answer;
 
 import java.util.List;
 

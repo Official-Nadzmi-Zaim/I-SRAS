@@ -1,6 +1,6 @@
-package com.seladanghijau.i_sras.provider;
+package com.seladanghijau.i_sras.providers;
 
-import com.seladanghijau.i_sras.dto.Score;
+import com.seladanghijau.i_sras.dtos.Score;
 
 /**
  * Created by seladanghijau on 11/9/2016.

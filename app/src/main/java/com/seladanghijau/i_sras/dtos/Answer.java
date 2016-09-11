@@ -1,4 +1,4 @@
-package com.seladanghijau.i_sras.dto;
+package com.seladanghijau.i_sras.dtos;
 
 /**
  * Created by seladanghijau on 11/9/2016.
