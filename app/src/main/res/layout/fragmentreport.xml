@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:scrollbarStyle="outsideOverlay"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,8 +9,9 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
-        <TextView
+
+        <com.seladanghijau.i_sras.custom.CustomTextView
+            app:font="arial.ttf"
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="@string/i_sras"
@@ -31,19 +33,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:gravity="start"
                     android:layout_span="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:gravity="center"
                     android:text="@string/score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:gravity="center"
                     android:text="@string/full_score"
                     android:layout_width="wrap_content"
@@ -55,20 +60,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:gravity="start"
                     android:text="@string/community"
                     android:layout_span="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:id="@+id/txtCommunity"
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:gravity="center"
                     android:text="@string/_44"
                     android:layout_width="wrap_content"
@@ -80,20 +88,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:gravity="start"
                     android:text="@string/workplace"
                     android:layout_span="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:id="@+id/txtWorkplace"
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:gravity="center"
                     android:text="@string/_75"
                     android:layout_width="wrap_content"
@@ -106,20 +117,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:gravity="start"
                     android:text="@string/enviromental"
                     android:layout_span="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:id="@+id/txtEnviromental"
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:gravity="center"
                     android:text="@string/_33"
                     android:layout_width="wrap_content"
@@ -132,20 +146,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:gravity="start"
                     android:text="@string/marketplace"
                     android:layout_span="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:id="@+id/txtMarketplace"
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:gravity="center"
                     android:text="@string/_34"
                     android:layout_width="wrap_content"
@@ -167,7 +184,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:padding="3dp"
                     android:layout_weight="1"
                     android:background="@color/orange"
@@ -181,7 +199,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/IrasScore"
@@ -189,7 +208,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/IrasScoreLevel"
@@ -204,7 +224,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:padding="3dp"
                     android:layout_weight="1"
                     android:background="@color/orange"
@@ -218,7 +239,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/VitalScore"
@@ -226,7 +248,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/VitalScoreLevel"
@@ -241,7 +264,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:padding="3dp"
                     android:layout_weight="1"
                     android:background="@color/orange"
@@ -255,7 +279,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/RecommendedScore"
@@ -263,7 +288,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />
 
-                <TextView
+                <com.seladanghijau.i_sras.custom.CustomTextView
+                    app:font="arial.ttf"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/RecommendedScoreLevel"
@@ -273,7 +299,8 @@
             </TableRow>
         </TableLayout>
 
-        <TextView
+        <com.seladanghijau.i_sras.custom.CustomTextView
+            app:font="arial.ttf"
             android:gravity="center"
             android:padding="5dp"
             android:background="#717171"
@@ -305,7 +332,8 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp" />
 
-                    <TextView
+                    <com.seladanghijau.i_sras.custom.CustomTextView
+                        app:font="arial.ttf"
                         android:layout_marginTop="5dp"
                         android:text="@string/community"
                         android:layout_width="wrap_content"
@@ -325,7 +353,8 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp" />
 
-                    <TextView
+                    <com.seladanghijau.i_sras.custom.CustomTextView
+                        app:font="arial.ttf"
                         android:layout_marginTop="5dp"
                         android:text="@string/workplace"
                         android:layout_width="wrap_content"
@@ -351,7 +380,8 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp" />
 
-                    <TextView
+                    <com.seladanghijau.i_sras.custom.CustomTextView
+                        app:font="arial.ttf"
                         android:layout_marginTop="5dp"
                         android:text="@string/enviromental"
                         android:layout_width="wrap_content"
@@ -371,7 +401,8 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp" />
 
-                    <TextView
+                    <com.seladanghijau.i_sras.custom.CustomTextView
+                        app:font="arial.ttf"
                         android:layout_marginTop="5dp"
                         android:text="@string/marketplace"
                         android:layout_width="wrap_content"

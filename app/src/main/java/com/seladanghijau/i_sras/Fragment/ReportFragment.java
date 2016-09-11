@@ -49,7 +49,6 @@ public class ReportFragment extends Fragment {
 
         btnDone = (Button) getActivity().findViewById(R.id.btnDone);
 
-
         //Set onClick Listener
         community.setOnClickListener(new OnButtonClick());
         environmental.setOnClickListener(new OnButtonClick());
