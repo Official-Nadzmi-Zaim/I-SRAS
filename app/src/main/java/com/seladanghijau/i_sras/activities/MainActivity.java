@@ -1,12 +1,13 @@
-package com.seladanghijau.i_sras;
+package com.seladanghijau.i_sras.activities;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.seladanghijau.i_sras.R;
 
+public class MainActivity extends AppCompatActivity {
     Fragment homeFragment, communityFragment, workplaceFragment, environmentFragment, marketplaceFragment, reportFragment;
 
     protected void onCreate(Bundle savedInstanceState) {
