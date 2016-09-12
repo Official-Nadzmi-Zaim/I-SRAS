@@ -12,7 +12,6 @@
         android:layout_height="wrap_content">
 
         <!-- Letak view dalam ni -->
-
         <com.seladanghijau.i_sras.custom.CustomTextView
             app:font="arial.ttf"
             android:text="@string/marketplace"
@@ -22,6 +21,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <!-- bahagian legend -->
+        <include layout="@layout/layout_legend" />
+
+        <!-- bahagian soalan -->
+        <include layout="@layout/layout_soalan_marketplace" />
 
         <RelativeLayout
             android:orientation="horizontal"
