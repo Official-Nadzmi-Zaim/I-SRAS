@@ -11,4 +11,10 @@
     <color name="orange">#eb7e26</color>
     <color name="green">#51e647</color>
     <color name="yellow">#ebe83d</color>
+
+    <!-- soalan -->
+    <color name="yes_vital">#00cc00</color>
+    <color name="yes_recommended">#0000ff</color>
+    <color name="no">#ff0000</color>
+    <color name="key_area">#00ffff</color>
 </resources>

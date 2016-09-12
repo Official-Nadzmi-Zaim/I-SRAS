@@ -15,7 +15,6 @@
         android:layout_height="wrap_content">
 
         <!-- Letak view dalam ni -->
-
         <com.seladanghijau.i_sras.custom.CustomTextView
             app:font="arial.ttf"
             android:text="@string/community"
@@ -25,7 +24,84 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <!-- bahagian legend -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:text="@string/legend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:text="@string/legend_vital"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@color/yes_vital"/>
+
+                <TextView
+                    android:text="@string/legend_recommended"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@color/yes_recommended"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- bahagian soalan -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/key_area_1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:text="@string/key_area_1_title_1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="@string/key_area_1_title_2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="@string/key_area_1_title_3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="@string/key_area_1_title_4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="@string/key_area_1_title_5"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+        <!-- bahagian button previous & next -->
         <RelativeLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"

@@ -28,8 +28,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
     // init methods --------------------------------------------------------------------------------
     public void initDB() throws Exception { // initialize db
-        if(!checkDBExistence()) {
-            this.getReadableDatabase();
+        if(!checkDBExistence()) { // check samada db dah ada atau belum
+            this.getReadableDatabase(); // kalau xda, buat db baru (copy db)
             copyDB();
         }
     }

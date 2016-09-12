@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">I-SRAS</string>
+
     <string name="home">
         <b>WELCOME TO ISLAMIC SOCIAL</b>\n
         <b>RESPONSIBILITY ASSESSMENT SYSTEM</b>\n
@@ -14,6 +15,7 @@
         1. An assessment of the current sosial responsibility conformance to i-CSR best practice social responsibility guidelines for Islamic organizations.\n\n
         2. An outline of suggested actions required to address deficiencies identified by the system during the assessment.
     </string>
+
     <string name="start">Start</string>
     <string name="i_sras">I-SRAS SCORE REPORT</string>
     <string name="score">SCORE</string>
@@ -34,4 +36,28 @@
     <string name="done">DONE</string>
     <string name="previous">Previous</string>
     <string name="next">Next</string>
+
+    <!-- soalan -->
+    <string name="legend">Legend:</string>
+    <string name="legend_vital">VITAL</string>
+    <string name="legend_recommended">RECOMMENDED</string>
+
+    <!-- key area strings -->
+    <!-- community -->
+    <string name="key_area_1">KEY AREA 1: SOCIAL DEVELOPMENT</string>
+    <string name="key_area_1_title_1">Contribution for the needy</string>
+    <string name="key_area_1_title_2">Community involvement</string>
+    <string name="key_area_1_title_3">Culture</string>
+    <string name="key_area_1_title_4">Contribution to the eligible recipients</string>
+    <string name="key_area_1_title_5">Promoting Islamic values</string>
+    <string name="key_area_2">KEY AREA 2: EDUCATION AND AWARENESS</string>
+    <string name="key_area_2_title_1">Education</string>
+    <string name="key_area_3">KEY AREA 3: ECONOMIC DEVELOPMENT</string>
+    <string name="key_area_3_title_1">Economic development</string>
+    <string name="key_area_3_title_2">Employment opportunity</string>
+    <string name="key_area_4">KEY AREA 4: HEALTH</string>
+    <string name="key_area_4_title_1">Health programmes for the public and the needy</string>
+    <!-- workplace -->
+    <!-- environmental -->
+    <!-- marketplace -->
 </resources>
