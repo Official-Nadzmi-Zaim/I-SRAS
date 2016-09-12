@@ -4,23 +4,30 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.seladanghijau.i_sras.R;
+import com.seladanghijau.i_sras.dtos.Soalan;
 import com.seladanghijau.i_sras.providers.SoalanProvider;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CommunityFragment extends Fragment {
 
     Fragment homeFragment, communityFragment, workplaceFragment;
     Button btnPreviousC, btnNextC;
+    List<Soalan> soalanList = new ArrayList<>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Dalam ini untuk apa apa code selain set listener dgn findviewbyid
+        soalanList = SoalanProvider.loadSoalanBasedOnCategory(1);
     }
 
     @Nullable
