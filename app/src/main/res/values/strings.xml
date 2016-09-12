@@ -44,21 +44,69 @@
 
     <!-- key area strings -->
     <!-- community -->
-    <string name="key_area_1">KEY AREA 1: SOCIAL DEVELOPMENT</string>
-    <string name="key_area_1_title_1">Contribution for the needy</string>
-    <string name="key_area_1_title_2">Community involvement</string>
-    <string name="key_area_1_title_3">Culture</string>
-    <string name="key_area_1_title_4">Contribution to the eligible recipients</string>
-    <string name="key_area_1_title_5">Promoting Islamic values</string>
-    <string name="key_area_2">KEY AREA 2: EDUCATION AND AWARENESS</string>
-    <string name="key_area_2_title_1">Education</string>
-    <string name="key_area_3">KEY AREA 3: ECONOMIC DEVELOPMENT</string>
-    <string name="key_area_3_title_1">Economic development</string>
-    <string name="key_area_3_title_2">Employment opportunity</string>
-    <string name="key_area_4">KEY AREA 4: HEALTH</string>
-    <string name="key_area_4_title_1">Health programmes for the public and the needy</string>
-    <string name="no">No</string>
+    <string name="community_key_area_1"><b>KEY AREA 1: SOCIAL DEVELOPMENT</b></string> <!-- key area 1 -->
+    <string name="community_key_area_1_title_1">Contribution for the needy</string>
+    <string name="community_key_area_1_title_2">Community involvement</string>
+    <string name="community_key_area_1_title_3">Culture</string>
+    <string name="community_key_area_1_title_4">Contribution to the eligible recipients</string>
+    <string name="community_key_area_1_title_5">Promoting Islamic values</string>
+    <string name="community_key_area_2"><b>KEY AREA 2: EDUCATION AND AWARENESS</b></string> <!-- key area 2 -->
+    <string name="community_key_area_2_title_1">Education</string>
+    <string name="community_key_area_3"><b>KEY AREA 3: ECONOMIC DEVELOPMENT</b></string> <!-- key area 3 -->
+    <string name="community_key_area_3_title_1">Economic development</string>
+    <string name="community_key_area_3_title_2">Employment opportunity</string>
+    <string name="community_key_area_4"><b>KEY AREA 4: HEALTH</b></string> <!-- key area 4 -->
+    <string name="community_key_area_4_title_1">Health programmes for the public and the needy</string>
     <!-- workplace -->
+    <string name="workplace_key_area_1"><b>KEY AREA 1: TRAINING AND EDUCATION</b></string> <!-- key area 1 -->
+    <string name="workplace_key_area_1_title_1">Spiritual and Motivational Enhancement</string>
+    <string name="workplace_key_area_1_title_2">Skill Enhancement</string>
+    <string name="workplace_key_area_1_title_3">Self-Development</string>
+    <string name="workplace_key_area_2"><b>KEY AREA 2: OCCUPATIONAL SAFETY AND HEALTH ADMINISTRATION (OSHA)</b></string> <!-- key area 2 -->
+    <string name="workplace_key_area_2_title_1">Health and Safety Requirements</string>
+    <string name="workplace_key_area_3"><b>KEY AREA 3: EQUITABLE OPPORTUNITY</b></string> <!-- key area 3 -->
+    <string name="workplace_key_area_3_title_1">Diversity of Workforce</string>
+    <string name="workplace_key_area_4"><b>KEY AREA 4: EMPLOYMENT</b></string> <!-- key area 4 -->
+    <string name="workplace_key_area_4_title_1">Remuneration and Benefits</string>
+    <string name="workplace_key_area_4_title_2">Facilities and Working Conditions</string>
+    <string name="workplace_key_area_4_title_3">Employees Volunteerism</string>
+    <string name="workplace_key_area_4_title_4">Healthy Working Environment</string>
+    <string name="workplace_key_area_5"><b>KEY AREA 5: AWARDS AND RECOGNITION</b></string> <!-- key area 5 -->
+    <string name="workplace_key_area_5_title_1">Incentives and Bonuses</string>
+    <string name="workplace_key_area_5_title_2">Innovative Ideas and Awards</string>
+    <string name="workplace_key_area_5_title_3">Loyalty Packages</string>
+    <string name="workplace_key_area_6"><b>KEY AREA 6: LABOUR AND MANAGEMENT RELATIONS</b></string> <!-- key area 6 -->
+    <string name="workplace_key_area_6_title_1">Employees-Management Engagement</string>
+    <string name="workplace_key_area_6_title_2">Communication</string>
     <!-- environmental -->
+    <string name="environmental_key_area_1"><b>KEY AREA 1: ENVIRONMENTAL RELATED POLICY</b></string> <!-- key area 1 -->
+    <string name="environmental_key_area_1_title_1">Policy Formulation</string>
+    <string name="environmental_key_area_2"><b>KEY AREA 2: CLIMATE CHANGE MITIGATION AND ADAPTATION</b></string> <!-- key area 2 -->
+    <string name="environmental_key_area_2_title_1">Energy Consumption</string>
+    <string name="environmental_key_area_2_title_2">Sustainable Initiatives</string>
+    <string name="environmental_key_area_2_title_3">Research and Development Programme</string>
+    <string name="environmental_key_area_2_title_4">Stakeholder Engagement</string>
+    <string name="environmental_key_area_2_title_5">Continuous Monitoring Initiatives</string>
+    <string name="environmental_key_area_2_title_6">Climate Change Policy</string>
+    <string name="environmental_key_area_3"><b>KEY AREA 3: PREVENTION OF POLLUTION</b></string> <!-- key area 3 -->
+    <string name="environmental_key_area_3_title_1">Prevention Initiatives</string>
+    <string name="environmental_key_area_3_title_2">Virtual Communication</string>
+    <string name="environmental_key_area_4"><b>KEY AREA 4: GREEN PRODUCTS AND SERVICES</b></string> <!-- key area 4 -->
+    <string name="environmental_key_area_4_title_1">Products</string>
+    <string name="environmental_key_area_4_title_2">Virtual Marketing</string>
+    <string name="environmental_key_area_5"><b>KEY AREA 5: PROTECTION AND RESTORATION OF THE NATURAL ENVIRONMENT</b></string> <!-- key area 5 -->
+    <string name="environmental_key_area_5_title_1">Environmental Preservation</string>
+    <string name="environmental_key_area_5_title_2">Education and Training</string>
     <!-- marketplace -->
+    <string name="marketplace_key_area_1"><b>KEY AREA 1: MARKET RELATED POLICIES</b></string> <!-- key area 1 -->
+    <string name="marketplace_key_area_1_title_1">Policy Formulation</string>
+    <string name="marketplace_key_area_2"><b>KEY AREA 2: PRODUCT AND SERVICES</b></string> <!-- key area 2 -->
+    <string name="marketplace_key_area_2_title_1">Shariah Compliant Products</string>
+    <string name="marketplace_key_area_2_title_2">Fair and Ethical Employment Practices</string>
+    <string name="marketplace_key_area_3"><b>KEY AREA 3: MARKETING</b></string> <!-- key area 3 -->
+    <string name="marketplace_key_area_3_title_1">Advertisement</string>
+    <string name="marketplace_key_area_3_title_2">Pricing</string>
+    <string name="marketplace_key_area_3_title_3">Customers’ Confidentiality Policy</string>
+    <string name="marketplace_key_area_3_title_4">Customer Appreciation</string>
+    <string name="marketplace_key_area_4"><b>KEY AREA 4: STAKEHOLDER ENGAGEMENT</b></string> <!-- key area 4 -->
 </resources>
