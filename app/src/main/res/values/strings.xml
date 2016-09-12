@@ -32,4 +32,6 @@
     <string name="vital">VITAL</string>
     <string name="recommended">RECOMMENDED</string>
     <string name="done">DONE</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
 </resources>
