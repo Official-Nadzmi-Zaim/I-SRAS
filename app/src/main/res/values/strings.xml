@@ -109,4 +109,7 @@
     <string name="marketplace_key_area_3_title_3">Customers’ Confidentiality Policy</string>
     <string name="marketplace_key_area_3_title_4">Customer Appreciation</string>
     <string name="marketplace_key_area_4"><b>KEY AREA 4: STAKEHOLDER ENGAGEMENT</b></string> <!-- key area 4 -->
+
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
 </resources>
