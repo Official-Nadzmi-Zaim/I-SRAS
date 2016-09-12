@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.seladanghijau.i_sras.R;
+import com.seladanghijau.i_sras.providers.SoalanProvider;
 
 public class CommunityFragment extends Fragment {
 
@@ -65,4 +66,5 @@ public class CommunityFragment extends Fragment {
             }
         }
     }
+
 }
