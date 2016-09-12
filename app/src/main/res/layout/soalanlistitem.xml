@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <com.seladanghijau.i_sras.custom.CustomTextView
+        app:font="arial.ttf"
         android:gravity="center"
         android:padding="3dp"
         android:id="@+id/qId"
@@ -12,6 +14,7 @@
         android:layout_height="match_parent" />
 
     <com.seladanghijau.i_sras.custom.CustomTextView
+        app:font="arial.ttf"
         android:layout_gravity="center_vertical"
         android:padding="3dp"
         android:layout_weight="1"
