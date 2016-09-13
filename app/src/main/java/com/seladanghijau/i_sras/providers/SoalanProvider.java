@@ -1,10 +1,8 @@
 package com.seladanghijau.i_sras.providers;
 
-import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.seladanghijau.i_sras.dtos.Answer;
 import com.seladanghijau.i_sras.dtos.Soalan;
 import com.seladanghijau.i_sras.helper.DBHelper;
 

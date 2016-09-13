@@ -2,7 +2,6 @@ package com.seladanghijau.i_sras.providers;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.renderscript.Script;
 
 import com.seladanghijau.i_sras.dtos.Answer;
 import com.seladanghijau.i_sras.dtos.Score;

@@ -1,25 +1,13 @@
 package com.seladanghijau.i_sras.helper;
 
-
-import android.content.Intent;
-import android.annotation.TargetApi;
-import android.graphics.Paint;
-import android.graphics.Rect;
-import android.os.Build;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.seladanghijau.i_sras.R;
-import com.seladanghijau.i_sras.adapter.SoalanAdapter;
 import com.seladanghijau.i_sras.custom.CustomTextView;
 import com.seladanghijau.i_sras.dtos.Answer;
 import com.seladanghijau.i_sras.providers.AnswerProvider;
