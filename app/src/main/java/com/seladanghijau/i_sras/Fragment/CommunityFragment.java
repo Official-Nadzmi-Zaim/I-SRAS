@@ -12,6 +12,7 @@ import android.widget.ListView;
 
 import com.seladanghijau.i_sras.R;
 import com.seladanghijau.i_sras.adapter.SoalanAdapter;
+import com.seladanghijau.i_sras.dtos.Answer;
 import com.seladanghijau.i_sras.dtos.Soalan;
 import com.seladanghijau.i_sras.helper.DBHelper;
 import com.seladanghijau.i_sras.helper.Helper;
@@ -27,6 +28,7 @@ public class CommunityFragment extends Fragment {
     List<Soalan> soalanList, soalanList2, soalanList3, soalanList4, soalanList5, soalanList6, soalanList7, soalanList8, soalanList9;
     ListView lvKeyArea1_1, lvKeyArea1_2, lvKeyArea1_3, lvKeyArea1_4, lvKeyArea1_5, lvKeyArea2_1, lvKeyArea3_1, lvKeyArea3_2, lvKeyArea4_1;
     SoalanAdapter soalanAdapter, soalanAdapter2, soalanAdapter3, soalanAdapter4, soalanAdapter5, soalanAdapter6, soalanAdapter7, soalanAdapter8, soalanAdapter9;
+    List<Answer> answerList, answerList2, answerList3, answerList4, answerList5, answerList6, answerList7, answerList8, answerList9;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,16 @@ public class CommunityFragment extends Fragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        answerList = new ArrayList<>();
+        answerList2 = new ArrayList<>();
+        answerList3 = new ArrayList<>();
+        answerList4 = new ArrayList<>();
+        answerList5 = new ArrayList<>();
+        answerList6 = new ArrayList<>();
+        answerList7 = new ArrayList<>();
+        answerList8 = new ArrayList<>();
+        answerList9 = new ArrayList<>();
 
         soalanList = new ArrayList<>();
         soalanList2 = new ArrayList<>();
@@ -60,16 +72,26 @@ public class CommunityFragment extends Fragment {
         soalanList8 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(1, 30, 31);
         soalanList9 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(1, 32, 34);
 
+        //answerlist
+        answerList = CreateAnswer(soalanList);
+        answerList2 = CreateAnswer(soalanList2);
+        answerList3 = CreateAnswer(soalanList3);
+        answerList4 = CreateAnswer(soalanList4);
+        answerList5 = CreateAnswer(soalanList5);
+        answerList6 = CreateAnswer(soalanList6);
+        answerList7 = CreateAnswer(soalanList7);
+        answerList8 = CreateAnswer(soalanList8);
+        answerList9 = CreateAnswer(soalanList9);
 
-        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList);
-        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList2);
-        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList3);
-        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList4);
-        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList5);
-        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList6);
-        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList7);
-        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList8);
-        soalanAdapter9 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList9);
+        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList, answerList);
+        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList2, answerList2);
+        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList3, answerList3);
+        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList4, answerList4);
+        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList5, answerList5);
+        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList6, answerList6);
+        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList7, answerList7);
+        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList8, answerList8);
+        soalanAdapter9 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList9, answerList9);
 
         soalanAdapter.notifyDataSetChanged();
         soalanAdapter2.notifyDataSetChanged();
@@ -153,6 +175,21 @@ public class CommunityFragment extends Fragment {
                     break;
             }
         }
+    }
+
+    //Create answer list based on soalan id
+    public List<Answer> CreateAnswer(List<Soalan> soalanList){
+
+        List<Answer> answerList = new ArrayList<>();
+
+        for (int i=0; i<soalanList.size(); i++){
+            Answer answer = new Answer();
+            answer.setAnswerId(soalanList.get(i).getSoalanId());
+
+            answerList.add(answer);
+        }
+
+        return answerList;
     }
 
 }
