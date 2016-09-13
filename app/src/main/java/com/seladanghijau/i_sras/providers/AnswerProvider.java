@@ -176,6 +176,51 @@ public class AnswerProvider {
         return answerList;
     }
 
+    public static List<Answer> loadAnswerBasedOnType(int soalanType) {
+        SQLiteDatabase sqliteDB;
+        Cursor cursor;
+        String sql;
+        List<Answer> answerList;
+
+        sqliteDB = SQLiteDatabase.openDatabase(DBHelper.DB_PATH, null, SQLiteDatabase.OPEN_READONLY); // open database
+
+        sql = "SELECT * " +
+                "FROM Answer " +
+                "WHERE answerId LIKE (" +
+                    "SELECT soalanId " +
+                    "FROM Soalan " +
+                    "WHERE soalanType LIKE " + soalanType +
+                ");"; // sql query
+        cursor = sqliteDB.rawQuery(sql, null); // return quried data in cursor
+
+        answerList = new ArrayList<>();
+        for(int x=0 ; x<cursor.getCount() ; x++) {
+            Answer tempAnswerObj;
+            int tempAnswerId;
+            boolean tempAnswer;
+
+            // initialization
+            tempAnswerObj = new Answer();
+
+            // store all data taken from cursor into temporary vars
+            tempAnswerId = cursor.getInt(cursor.getColumnIndex("answerId")); // answerId
+            if(cursor.getInt(cursor.getColumnIndex("answerId")) == 0) // answer
+                tempAnswer = false;
+            else
+                tempAnswer = true;
+
+            // setup all data into temporary Answer object
+            tempAnswerObj.setAnswerId(tempAnswerId);
+            tempAnswerObj.setAnswer(tempAnswer);
+
+            answerList.add(tempAnswerObj);
+        }
+
+        cursor.close();
+
+        return answerList;
+    }
+
     public static List<Answer> loadAnswerBAsedOnCriteria(int soalanCategory, boolean answer) { // load semua jawapan yang ada persamaan dengan <parameter1> & <parameret2>
         SQLiteDatabase sqliteDB;
         Cursor cursor;
@@ -236,7 +281,7 @@ public class AnswerProvider {
         String sql;
         int tempAnswerId, tempAnswer;
 
-        sqliteDB = SQLiteDatabase.openDatabase(DBHelper.DB_PATH, null, SQLiteDatabase.OPEN_READONLY); // open database
+        sqliteDB = SQLiteDatabase.openDatabase(DBHelper.DB_PATH, null, SQLiteDatabase.OPEN_READWRITE); // open database
 
         // extract data from Answer obj
         tempAnswerId = answer.getAnswerId();
@@ -257,7 +302,7 @@ public class AnswerProvider {
         Cursor cursor;
         String sql;
 
-        sqliteDB = SQLiteDatabase.openDatabase(DBHelper.DB_PATH, null, SQLiteDatabase.OPEN_READONLY); // open database
+        sqliteDB = SQLiteDatabase.openDatabase(DBHelper.DB_PATH, null, SQLiteDatabase.OPEN_READWRITE); // open database
 
         // sql query
         sql = "UPDATE Answer " +
@@ -275,7 +320,7 @@ public class AnswerProvider {
         Cursor cursor;
         String sql;
 
-        sqliteDB = SQLiteDatabase.openDatabase(DBHelper.DB_PATH, null, SQLiteDatabase.OPEN_READONLY); // open database
+        sqliteDB = SQLiteDatabase.openDatabase(DBHelper.DB_PATH, null, SQLiteDatabase.OPEN_READWRITE); // open database
 
         // sql query
         sql = "DELETE * " +

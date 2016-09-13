@@ -19,6 +19,16 @@ public class Score {
         recommendedLevel = 0;
     }
 
+    public Score(int israsLevel, int vitalLevel, int recommendedLevel) {
+        scoreId = 0;
+        israsScore = 0;
+        vitalScore = 0;
+        recommendedScore = 0;
+        this.israsLevel = israsLevel;
+        this.vitalLevel = vitalLevel;
+        this.recommendedLevel = recommendedLevel;
+    }
+
     public Score(int scoreId, int israsScore, int vitalScore, int recommendedScore, int israsLevel, int vitalLevel, int recommendedLevel) {
         this.scoreId = scoreId;
         this.israsScore = israsScore;
