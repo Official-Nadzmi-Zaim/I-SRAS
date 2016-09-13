@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -19,14 +18,16 @@ import java.util.List;
 public class SoalanAdapter extends ArrayAdapter<Soalan> {
 
     List<Soalan> soalanList;
+    List<Answer> answerList;
     Context context;
     int layoutResourceId;
 
-    public SoalanAdapter(Context context, int layoutResourceId, List<Soalan> soalanList) {
+    public SoalanAdapter(Context context, int layoutResourceId, List<Soalan> soalanList, List<Answer> answerList) {
         super(context, layoutResourceId, soalanList);
         this.layoutResourceId = layoutResourceId;
         this.context = context;
         this.soalanList = soalanList;
+        this.answerList = answerList;
     }
 
     @Override
@@ -56,12 +57,12 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
 
             if (button==1){
                 viewHolder.btn1.setVisibility(View.VISIBLE);
-                //viewHolder.btn1.setOnClickListener(new OnClick(position, viewHolder));
+                viewHolder.btn1.setOnClickListener(new OnClick(position, viewHolder));
                 viewHolder.btn2.setVisibility(View.INVISIBLE);
             }else if (button==2){
                 viewHolder.btn1.setVisibility(View.INVISIBLE);
                 viewHolder.btn2.setVisibility(View.VISIBLE);
-                //viewHolder.btn2.setOnClickListener(new OnClick(position, viewHolder));
+                viewHolder.btn2.setOnClickListener(new OnClick(position, viewHolder));
             }
         }
         return  convertView;
@@ -72,7 +73,7 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
         Button btn1, btn2;
     }
 
-    /*
+
     private class OnClick implements View.OnClickListener{
 
         ViewHolder viewHolder;
@@ -84,44 +85,40 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
 
         @Override
         public void onClick(View v) {
-            boolean buttonValue;
+            boolean answerValue;
 
             switch (v.getId()){
                 case R.id.qButton1:
-                    Log.d("Button 1", "Clicking");
-                    buttonValue = soalanList.get(position).isValues();
+                    answerValue = answerList.get(position).getAnswer();
 
-                    if (buttonValue){
-                        Log.d("False", "False");
-                        viewHolder.btn1.setText(R.string.No);
-                        viewHolder.btn1.setBackgroundResource(R.color.Red);
-                        soalanList.get(position).setValues(false);
+                    if (answerValue){
+                        viewHolder.btn1.setText(R.string.no);
+                        viewHolder.btn1.setBackgroundResource(R.color.red);
+                        answerList.get(position).setAnswer(false);
                     }else{
-                        Log.d("True", "True");
-                        viewHolder.btn1.setText(R.string.Yes);
-                        viewHolder.btn1.setBackgroundResource(R.color.Green);
-                        soalanList.get(position).setValues(true);
+                        viewHolder.btn1.setText(R.string.yes);
+                        viewHolder.btn1.setBackgroundResource(R.color.green);
+                        answerList.get(position).setAnswer(true);
                     }
                     break;
                 case R.id.qButton2:
-                    Log.d("Button 2", "Clicking");
-                    buttonValue = soalanList.get(position).isValues();
+                    answerValue = answerList.get(position).getAnswer();
 
-                    if (buttonValue){
+                    if (answerValue){
                         Log.d("False", "False");
-                        viewHolder.btn2.setText(R.string.No);
-                        viewHolder.btn2.setBackgroundResource(R.color.Red);
-                        questionList.get(position).setValues(false);
+                        viewHolder.btn2.setText(R.string.no);
+                        viewHolder.btn2.setBackgroundResource(R.color.red);
+                        answerList.get(position).setAnswer(false);
                     }else{
                         Log.d("True", "True");
-                        viewHolder.btn2.setText(R.string.Yes);
-                        viewHolder.btn2.setBackgroundResource(R.color.Green);
-                        questionList.get(position).setValues(true);
+                        viewHolder.btn2.setText(R.string.yes);
+                        viewHolder.btn2.setBackgroundResource(R.color.yes_recommended);
+                        answerList.get(position).setAnswer(true);
                     }
                     break;
                 default:
                     break;
             }
         }
-    }*/
+    }
 }
