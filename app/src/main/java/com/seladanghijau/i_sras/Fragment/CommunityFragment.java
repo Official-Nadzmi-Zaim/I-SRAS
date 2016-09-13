@@ -118,7 +118,7 @@ public class CommunityFragment extends Fragment {
 
         Helper.getListViewSize(lvKeyArea1_1, 0);
         Helper.getListViewSize(lvKeyArea1_2, 2);
-        Helper.getListViewSize(lvKeyArea1_3, 2);
+        Helper.getListViewSize(lvKeyArea1_3, 1);
         Helper.getListViewSize(lvKeyArea1_4, 0);
         Helper.getListViewSize(lvKeyArea1_5, 0);
         Helper.getListViewSize(lvKeyArea2_1, 1);
