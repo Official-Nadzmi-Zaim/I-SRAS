@@ -44,6 +44,7 @@ public class Helper {
             Log.d("Height", ""+totalHeight);
         }
 
+
         totalHeight += listView.getDividerHeight()*size;
         totalHeight = totalHeight + (totalHeight/2);
         //setting listview item in adapter
