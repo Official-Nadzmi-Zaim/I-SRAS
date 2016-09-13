@@ -116,15 +116,15 @@ public class CommunityFragment extends Fragment {
         lvKeyArea3_2.setAdapter(soalanAdapter8);
         lvKeyArea4_1.setAdapter(soalanAdapter9);
 
-        Helper.getListViewSize(lvKeyArea1_1);
-        Helper.getListViewSize(lvKeyArea1_2);
-        Helper.getListViewSize(lvKeyArea1_3);
-        Helper.getListViewSize(lvKeyArea1_4);
-        Helper.getListViewSize(lvKeyArea1_5);
-        Helper.getListViewSize(lvKeyArea2_1);
-        Helper.getListViewSize(lvKeyArea3_1);
-        Helper.getListViewSize(lvKeyArea3_2);
-        Helper.getListViewSize(lvKeyArea4_1);
+        Helper.getListViewSize(lvKeyArea1_1, 0);
+        Helper.getListViewSize(lvKeyArea1_2, 2);
+        Helper.getListViewSize(lvKeyArea1_3, 2);
+        Helper.getListViewSize(lvKeyArea1_4, 0);
+        Helper.getListViewSize(lvKeyArea1_5, 0);
+        Helper.getListViewSize(lvKeyArea2_1, 1);
+        Helper.getListViewSize(lvKeyArea3_1, 0);
+        Helper.getListViewSize(lvKeyArea3_2, 0);
+        Helper.getListViewSize(lvKeyArea4_1, 1);
 
         btnPreviousC = (Button) getActivity().findViewById(R.id.btnPreviousC);
         btnNextC = (Button) getActivity().findViewById(R.id.btnNextC);

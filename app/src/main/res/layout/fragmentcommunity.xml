@@ -87,6 +87,7 @@
 
             <!-- key area 2 -->
             <TextView
+                android:layout_marginTop="20dp"
                 android:text="@string/community_key_area_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -102,6 +103,7 @@
 
             <!-- key area 3 -->
             <TextView
+                android:layout_marginTop="20dp"
                 android:text="@string/community_key_area_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -126,6 +128,7 @@
 
             <!-- key area 4 -->
             <TextView
+                android:layout_marginTop="20dp"
                 android:text="@string/community_key_area_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
