@@ -49,7 +49,7 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
         }
 
         if (soalanList!=null){
-            viewHolder.id.setText(String.valueOf(soalanList.get(position).getSoalanId()));
+            viewHolder.id.setText(String.valueOf(soalanList.get(position).getSoalanNo()));
             viewHolder.question.setText(soalanList.get(position).getSoalanDesc());
 
             int button;
@@ -107,13 +107,11 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
                     answerValue = answerList.get(position).getAnswer();
 
                     if (answerValue){
-                        Log.d("False", "False");
                         viewHolder.btn2.setText(R.string.no);
                         viewHolder.btn2.setBackgroundResource(R.color.red);
                         viewHolder.btn2.setTextColor(viewHolder.btn2.getResources().getColor(R.color.white));
                         answerList.get(position).setAnswer(false);
                     }else{
-                        Log.d("True", "True");
                         viewHolder.btn2.setText(R.string.yes);
                         viewHolder.btn2.setBackgroundResource(R.color.yes_recommended);
                         viewHolder.btn2.setTextColor(viewHolder.btn2.getResources().getColor(R.color.white));

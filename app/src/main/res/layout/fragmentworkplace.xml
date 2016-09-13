@@ -41,8 +41,10 @@
                 android:text="@string/workplace_key_area_1_title_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea1_1"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea1_1_1a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -50,8 +52,10 @@
                 android:text="@string/workplace_key_area_1_title_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea1_2"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea1_2_2a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -59,8 +63,10 @@
                 android:text="@string/workplace_key_area_1_title_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea1_3"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea1_3_3a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -74,8 +80,10 @@
                 android:text="@string/workplace_key_area_2_title_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea2_1"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea2_1_4a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -89,8 +97,10 @@
                 android:text="@string/workplace_key_area_3_title_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea3_1"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea3_1_5a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -104,8 +114,10 @@
                 android:text="@string/workplace_key_area_4_title_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea4_1"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea4_1_6a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -113,8 +125,10 @@
                 android:text="@string/workplace_key_area_4_title_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea4_2"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea4_2_7a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -122,8 +136,10 @@
                 android:text="@string/workplace_key_area_4_title_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea4_3"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea4_3_8a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -131,8 +147,10 @@
                 android:text="@string/workplace_key_area_4_title_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea4_4"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea4_4_9a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -146,8 +164,10 @@
                 android:text="@string/workplace_key_area_5_title_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea5_1"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea5_1_10a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -155,8 +175,10 @@
                 android:text="@string/workplace_key_area_5_title_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea5_2"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea5_2_11a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -164,8 +186,10 @@
                 android:text="@string/workplace_key_area_5_title_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea5_3"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea5_3_12a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -179,8 +203,10 @@
                 android:text="@string/workplace_key_area_6_title_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea6_1"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea6_1_13a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -188,8 +214,10 @@
                 android:text="@string/workplace_key_area_6_title_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea6_2"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea6_2_14a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
