@@ -2,8 +2,10 @@ package com.seladanghijau.i_sras.helper;
 
 
 import android.content.Intent;
+import android.annotation.TargetApi;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.os.Build;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +25,7 @@ import com.seladanghijau.i_sras.dtos.Answer;
 import com.seladanghijau.i_sras.providers.AnswerProvider;
 
 public class Helper {
-    public static void getListViewSize(ListView listView , int typeSize){
+    public static void getListViewSize(ListView listView){
         ListAdapter listAdapter = listView.getAdapter();
         if (listAdapter == null){
             return;
@@ -34,31 +36,28 @@ public class Helper {
 
         //setting listadapter in loop for getting final size
         int totalHeight = 0;
-        int extraHeight = 0;
 
-        if (typeSize == 1){
-            extraHeight = 45;
-        }else if (typeSize == 2){
-            extraHeight = 25;
-        }else if (typeSize==3){
-            extraHeight = 55;
-        }else if (typeSize==4){
-            extraHeight = 70;
-        }else if (typeSize==5){
-            extraHeight = 130;
-        }
-
-        for (int size=0; size<listAdapter.getCount(); size++){
+        int size;
+        int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(), View.MeasureSpec.UNSPECIFIED);
+        for (size = 0; size<listAdapter.getCount(); size++){
             View listItem = listAdapter.getView(size, null, listView);
-            listItem.measure(0, 0);
-            totalHeight += listItem.getMeasuredHeight() + extraHeight;
+            if (size == 0){
+                listItem.setLayoutParams(new ViewGroup.LayoutParams(desiredWidth, ViewGroup.LayoutParams.WRAP_CONTENT));
+            }
+            //listItem.measure(0, 0);
+            listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+            totalHeight += listItem.getMeasuredHeight();
+            Log.d("Height", ""+totalHeight);
         }
 
+
+        totalHeight += listView.getDividerHeight()*size;
+        totalHeight = totalHeight + (totalHeight/2);
         //setting listview item in adapter
         ViewGroup.LayoutParams params = listView.getLayoutParams();
         params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount()-1));
         listView.setLayoutParams(params);
-        listView.requestLayout();
+        //listView.requestLayout();
     }
 
     // helper utk amik value answer dlm setiap row utk setiap soalan dlm listview

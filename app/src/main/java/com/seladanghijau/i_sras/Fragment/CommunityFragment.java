@@ -4,10 +4,12 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.seladanghijau.i_sras.R;
@@ -137,15 +139,15 @@ public class CommunityFragment extends Fragment {
         lvKeyArea3_2.setAdapter(soalanAdapter8);
         lvKeyArea4_1.setAdapter(soalanAdapter9);
 
-        Helper.getListViewSize(lvKeyArea1_1, 0);
-        Helper.getListViewSize(lvKeyArea1_2, 2);
-        Helper.getListViewSize(lvKeyArea1_3, 1);
-        Helper.getListViewSize(lvKeyArea1_4, 0);
-        Helper.getListViewSize(lvKeyArea1_5, 0);
-        Helper.getListViewSize(lvKeyArea2_1, 1);
-        Helper.getListViewSize(lvKeyArea3_1, 0);
-        Helper.getListViewSize(lvKeyArea3_2, 0);
-        Helper.getListViewSize(lvKeyArea4_1, 1);
+        Helper.getListViewSize(lvKeyArea1_1);
+        Helper.getListViewSize(lvKeyArea1_2);
+        Helper.getListViewSize(lvKeyArea1_3);
+        Helper.getListViewSize(lvKeyArea1_4);
+        Helper.getListViewSize(lvKeyArea1_5);
+        Helper.getListViewSize(lvKeyArea2_1);
+        Helper.getListViewSize(lvKeyArea3_1);
+        Helper.getListViewSize(lvKeyArea3_2);
+        Helper.getListViewSize(lvKeyArea4_1);
 
         btnPreviousC = (Button) getActivity().findViewById(R.id.btnPreviousC);
         btnNextC = (Button) getActivity().findViewById(R.id.btnNextC);
@@ -201,5 +203,4 @@ public class CommunityFragment extends Fragment {
 
         return answerList;
     }
-
 }
