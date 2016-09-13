@@ -4,9 +4,8 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import com.seladanghijau.i_sras.R;
-import com.seladanghijau.i_sras.helper.DBHelper;
+
 
 public class MainActivity extends AppCompatActivity {
     Fragment homeFragment, communityFragment, workplaceFragment, environmentFragment, marketplaceFragment, reportFragment;

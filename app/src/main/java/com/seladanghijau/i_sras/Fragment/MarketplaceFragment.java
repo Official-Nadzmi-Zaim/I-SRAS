@@ -128,14 +128,14 @@ public class MarketplaceFragment extends Fragment {
         lvKeyArea4_1.setAdapter(soalanAdapter8);
 
 
-        Helper.getListViewSize(lvKeyArea1_1, 4);
-        Helper.getListViewSize(lvKeyArea2_1, 2);
-        Helper.getListViewSize(lvKeyArea2_2, 4);
-        Helper.getListViewSize(lvKeyArea3_1, 3);
-        Helper.getListViewSize(lvKeyArea3_2, 1);
-        Helper.getListViewSize(lvKeyArea3_3, 4);
-        Helper.getListViewSize(lvKeyArea3_4, 4);
-        Helper.getListViewSize(lvKeyArea4_1, 4);
+        Helper.getListViewSize(lvKeyArea1_1);
+        Helper.getListViewSize(lvKeyArea2_1);
+        Helper.getListViewSize(lvKeyArea2_2);
+        Helper.getListViewSize(lvKeyArea3_1);
+        Helper.getListViewSize(lvKeyArea3_2);
+        Helper.getListViewSize(lvKeyArea3_3);
+        Helper.getListViewSize(lvKeyArea3_4);
+        Helper.getListViewSize(lvKeyArea4_1);
 
         btnPreviousM = (Button) getActivity().findViewById(R.id.btnPreviousM);
         btnNextM = (Button) getActivity().findViewById(R.id.btnNextM);

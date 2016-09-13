@@ -46,7 +46,6 @@ public class HomeFragment extends Fragment{
         @Override
         public void onClick(View v) {
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-
             switch (v.getId()){
                 case R.id.btnHome:
                     fragmentTransaction.hide(homeFragment);

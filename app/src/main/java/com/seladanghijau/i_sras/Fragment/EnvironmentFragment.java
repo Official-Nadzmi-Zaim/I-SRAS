@@ -167,19 +167,19 @@ public class EnvironmentFragment extends Fragment {
         lvKeyArea5_1.setAdapter(soalanAdapter12);
         lvKeyArea5_2.setAdapter(soalanAdapter13);
 
-        Helper.getListViewSize(lvKeyArea1_1, 1);
-        Helper.getListViewSize(lvKeyArea2_1, 2);
-        Helper.getListViewSize(lvKeyArea2_2, 1);
-        Helper.getListViewSize(lvKeyArea2_3, 5);
-        Helper.getListViewSize(lvKeyArea2_4, 4);
-        Helper.getListViewSize(lvKeyArea2_5, 5);
-        Helper.getListViewSize(lvKeyArea2_6, 5);
-        Helper.getListViewSize(lvKeyArea3_1, 5);
-        Helper.getListViewSize(lvKeyArea3_2, 5);
-        Helper.getListViewSize(lvKeyArea4_1, 2);
-        Helper.getListViewSize(lvKeyArea4_2, 2);
-        Helper.getListViewSize(lvKeyArea5_1, 5);
-        Helper.getListViewSize(lvKeyArea5_2, 3);
+        Helper.getListViewSize(lvKeyArea1_1);
+        Helper.getListViewSize(lvKeyArea2_1);
+        Helper.getListViewSize(lvKeyArea2_2);
+        Helper.getListViewSize(lvKeyArea2_3);
+        Helper.getListViewSize(lvKeyArea2_4);
+        Helper.getListViewSize(lvKeyArea2_5);
+        Helper.getListViewSize(lvKeyArea2_6);
+        Helper.getListViewSize(lvKeyArea3_1);
+        Helper.getListViewSize(lvKeyArea3_2);
+        Helper.getListViewSize(lvKeyArea4_1);
+        Helper.getListViewSize(lvKeyArea4_2);
+        Helper.getListViewSize(lvKeyArea5_1);
+        Helper.getListViewSize(lvKeyArea5_2);
 
         btnPreviousE = (Button) getActivity().findViewById(R.id.btnPreviousE);
         btnNextE = (Button) getActivity().findViewById(R.id.btnNextE);
