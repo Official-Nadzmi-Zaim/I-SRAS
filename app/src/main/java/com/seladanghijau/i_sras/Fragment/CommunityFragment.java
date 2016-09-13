@@ -31,10 +31,9 @@ public class CommunityFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Dalam ini untuk apa apa code selain set listener dgn findviewbyid
-        DBHelper dbHelper = new DBHelper(getActivity());
+        // Dalam ini untuk apa apa code selain set listener dgn findviewbyid
         try {
-            dbHelper.initDB();
+            new DBHelper(getActivity()).initDB(); // initialize sqlitedb
         } catch (Exception e) {
             e.printStackTrace();
         }
