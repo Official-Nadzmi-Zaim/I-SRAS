@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/soalanLinearLayout"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <com.seladanghijau.i_sras.custom.CustomTextView
         app:font="arial.ttf"
@@ -31,6 +32,7 @@
             android:visibility="invisible"
             android:layout_gravity="center"
             android:background="#ff0909"
+            android:textColor="@color/white"
             android:text="@string/no"
             android:id="@+id/qButton1"
             android:layout_width="50dp"
@@ -41,6 +43,7 @@
             android:gravity="center"
             android:layout_margin="2dp"
             android:background="#ff0909"
+            android:textColor="@color/white"
             android:text="@string/no"
             android:id="@+id/qButton2"
             android:layout_width="50dp"

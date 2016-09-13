@@ -94,10 +94,12 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
                     if (answerValue){
                         viewHolder.btn1.setText(R.string.no);
                         viewHolder.btn1.setBackgroundResource(R.color.red);
+                        viewHolder.btn1.setTextColor(viewHolder.btn1.getResources().getColor(R.color.white));
                         answerList.get(position).setAnswer(false);
                     }else{
                         viewHolder.btn1.setText(R.string.yes);
                         viewHolder.btn1.setBackgroundResource(R.color.green);
+                        viewHolder.btn1.setTextColor(viewHolder.btn1.getResources().getColor(R.color.black));
                         answerList.get(position).setAnswer(true);
                     }
                     break;
@@ -108,11 +110,13 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
                         Log.d("False", "False");
                         viewHolder.btn2.setText(R.string.no);
                         viewHolder.btn2.setBackgroundResource(R.color.red);
+                        viewHolder.btn2.setTextColor(viewHolder.btn2.getResources().getColor(R.color.white));
                         answerList.get(position).setAnswer(false);
                     }else{
                         Log.d("True", "True");
                         viewHolder.btn2.setText(R.string.yes);
                         viewHolder.btn2.setBackgroundResource(R.color.yes_recommended);
+                        viewHolder.btn2.setTextColor(viewHolder.btn2.getResources().getColor(R.color.white));
                         answerList.get(position).setAnswer(true);
                     }
                     break;

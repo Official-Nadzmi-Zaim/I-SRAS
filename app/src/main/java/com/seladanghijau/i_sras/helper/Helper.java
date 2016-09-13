@@ -1,12 +1,20 @@
 package com.seladanghijau.i_sras.helper;
 
 
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.seladanghijau.i_sras.R;
+import com.seladanghijau.i_sras.custom.CustomTextView;
 
 public class Helper {
     public static void getListViewSize(ListView listView , int typeSize){
