@@ -271,8 +271,7 @@ public class ScoreProvider {
 
         sqliteDB = SQLiteDatabase.openDatabase(DBHelper.DB_PATH, null, SQLiteDatabase.OPEN_READWRITE); // open db
 
-        sql = "DELETE * " +
-                "FROM Score;";
+        sql = "DELETE FROM Score;";
         cursor = sqliteDB.rawQuery(sql, null);
 
         cursor.close();

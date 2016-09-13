@@ -73,7 +73,6 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
         Button btn1, btn2;
     }
 
-
     private class OnClick implements View.OnClickListener{
 
         ViewHolder viewHolder;
@@ -99,7 +98,7 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
                     }else{
                         viewHolder.btn1.setText(R.string.yes);
                         viewHolder.btn1.setBackgroundResource(R.color.green);
-                        viewHolder.btn1.setTextColor(viewHolder.btn1.getResources().getColor(R.color.black));
+                        viewHolder.btn1.setTextColor(viewHolder.btn1.getResources().getColor(R.color.white));
                         answerList.get(position).setAnswer(true);
                     }
                     break;

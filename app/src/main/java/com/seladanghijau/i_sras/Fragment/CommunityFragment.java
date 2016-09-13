@@ -33,12 +33,11 @@ public class CommunityFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         // Dalam ini untuk apa apa code selain set listener dgn findviewbyid
         try {
             new DBHelper(getActivity()).initDB(); // initialize sqlitedb
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        } catch (Exception e) { e.printStackTrace(); }
 
         answerList = new ArrayList<>();
         answerList2 = new ArrayList<>();
@@ -82,15 +81,15 @@ public class CommunityFragment extends Fragment {
         answerList8 = CreateAnswer(soalanList8);
         answerList9 = CreateAnswer(soalanList9);
 
-        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList, answerList);
-        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList2, answerList2);
-        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList3, answerList3);
-        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList4, answerList4);
-        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList5, answerList5);
-        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList6, answerList6);
-        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList7, answerList7);
-        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList8, answerList8);
-        soalanAdapter9 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList9, answerList9);
+        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList, answerList);
+        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList2, answerList2);
+        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList3, answerList3);
+        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList4, answerList4);
+        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList5, answerList5);
+        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList6, answerList6);
+        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList7, answerList7);
+        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList8, answerList8);
+        soalanAdapter9 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList9, answerList9);
 
         soalanAdapter.notifyDataSetChanged();
         soalanAdapter2.notifyDataSetChanged();
@@ -117,6 +116,7 @@ public class CommunityFragment extends Fragment {
         homeFragment = getFragmentManager().findFragmentById(R.id.HomeFragment);
         communityFragment = getFragmentManager().findFragmentById(R.id.CommunityFragment);
         workplaceFragment = getFragmentManager().findFragmentById(R.id.WorkplaceFragment);
+
         lvKeyArea1_1 = (ListView) getActivity().findViewById(R.id.lvKeyArea1_1);
         lvKeyArea1_2 = (ListView) getActivity().findViewById(R.id.lvKeyArea1_2);
         lvKeyArea1_3 = (ListView) getActivity().findViewById(R.id.lvKeyArea1_3);
@@ -166,6 +166,17 @@ public class CommunityFragment extends Fragment {
                     fragmentTransaction.commit();
                     break;
                 case R.id.btnNextC :
+                    // retrieve user's answer & store the answer into db
+                    Helper.getUserAnswer(1, lvKeyArea1_1);
+                    Helper.getUserAnswer(1, lvKeyArea1_2);
+                    Helper.getUserAnswer(1, lvKeyArea1_3);
+                    Helper.getUserAnswer(1, lvKeyArea1_4);
+                    Helper.getUserAnswer(1, lvKeyArea1_5);
+                    Helper.getUserAnswer(1, lvKeyArea2_1);
+                    Helper.getUserAnswer(1, lvKeyArea3_1);
+                    Helper.getUserAnswer(1, lvKeyArea3_2);
+                    Helper.getUserAnswer(1, lvKeyArea4_1);
+
                     fragmentTransaction.hide(communityFragment);
                     fragmentTransaction.show(workplaceFragment);
                     fragmentTransaction.commit();

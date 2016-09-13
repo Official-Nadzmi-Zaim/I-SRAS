@@ -75,14 +75,14 @@ public class MarketplaceFragment extends Fragment {
         answerList8 = CreateAnswer(soalanList8);
 
 
-        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList, answerList);
-        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList2, answerList2);
-        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList3, answerList3);
-        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList4, answerList4);
-        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList5, answerList5);
-        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList6, answerList6);
-        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList7, answerList7);
-        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList8, answerList8);
+        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList, answerList);
+        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList2, answerList2);
+        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList3, answerList3);
+        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList4, answerList4);
+        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList5, answerList5);
+        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList6, answerList6);
+        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList7, answerList7);
+        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList8, answerList8);
 
         soalanAdapter.notifyDataSetChanged();
         soalanAdapter2.notifyDataSetChanged();
@@ -156,6 +156,16 @@ public class MarketplaceFragment extends Fragment {
                     fragmentTransaction.commit();
                     break;
                 case R.id.btnNextM :
+                    // retrieve user's answer & store the answer into db
+                    Helper.getUserAnswer(4, lvKeyArea1_1);
+                    Helper.getUserAnswer(4, lvKeyArea2_1);
+                    Helper.getUserAnswer(4, lvKeyArea2_2);
+                    Helper.getUserAnswer(4, lvKeyArea3_1);
+                    Helper.getUserAnswer(4, lvKeyArea3_2);
+                    Helper.getUserAnswer(4, lvKeyArea3_3);
+                    Helper.getUserAnswer(4, lvKeyArea3_4);
+                    Helper.getUserAnswer(4, lvKeyArea4_1);
+
                     fragmentTransaction.hide(marketplaceFragment);
                     fragmentTransaction.show(reportFragment);
                     fragmentTransaction.commit();

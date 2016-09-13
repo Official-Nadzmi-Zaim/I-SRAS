@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.seladanghijau.i_sras.R;
+import com.seladanghijau.i_sras.providers.AnswerProvider;
+import com.seladanghijau.i_sras.providers.ScoreProvider;
 
 public class ReportFragment extends Fragment {
 
@@ -85,6 +87,9 @@ public class ReportFragment extends Fragment {
                     fragmentTransaction.commit();
                     break;
                 case R.id.btnDone:
+                    AnswerProvider.clearAnswer();
+                    ScoreProvider.clearScore();
+
                     fragmentTransaction.hide(reportFragment);
                     fragmentTransaction.show(homeFragment);
                     fragmentTransaction.commit();

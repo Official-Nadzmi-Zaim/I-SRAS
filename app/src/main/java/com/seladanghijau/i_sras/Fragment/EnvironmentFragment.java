@@ -95,19 +95,19 @@ public class EnvironmentFragment extends Fragment {
         answerList13 = CreateAnswer(soalanList13);
 
 
-        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList, answerList);
-        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList2, answerList2);
-        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList3, answerList3);
-        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList4, answerList4);
-        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList5, answerList5);
-        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList6, answerList6);
-        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList7, answerList7);
-        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList8, answerList8);
-        soalanAdapter9 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList9, answerList9);
-        soalanAdapter10 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList10, answerList10);
-        soalanAdapter11 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList11, answerList11);
-        soalanAdapter12 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList12, answerList12);
-        soalanAdapter13 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList13, answerList13);
+        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList, answerList);
+        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList2, answerList2);
+        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList3, answerList3);
+        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList4, answerList4);
+        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList5, answerList5);
+        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList6, answerList6);
+        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList7, answerList7);
+        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList8, answerList8);
+        soalanAdapter9 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList9, answerList9);
+        soalanAdapter10 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList10, answerList10);
+        soalanAdapter11 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList11, answerList11);
+        soalanAdapter12 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList12, answerList12);
+        soalanAdapter13 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList13, answerList13);
 
         soalanAdapter.notifyDataSetChanged();
         soalanAdapter2.notifyDataSetChanged();
@@ -200,6 +200,21 @@ public class EnvironmentFragment extends Fragment {
                     fragmentTransaction.commit();
                     break;
                 case R.id.btnNextE :
+                    // retrieve user's answer & store the answer into db
+                    Helper.getUserAnswer(3, lvKeyArea1_1);
+                    Helper.getUserAnswer(3, lvKeyArea2_1);
+                    Helper.getUserAnswer(3, lvKeyArea2_2);
+                    Helper.getUserAnswer(3, lvKeyArea2_3);
+                    Helper.getUserAnswer(3, lvKeyArea2_4);
+                    Helper.getUserAnswer(3, lvKeyArea2_5);
+                    Helper.getUserAnswer(3, lvKeyArea2_6);
+                    Helper.getUserAnswer(3, lvKeyArea3_1);
+                    Helper.getUserAnswer(3, lvKeyArea3_2);
+                    Helper.getUserAnswer(3, lvKeyArea4_1);
+                    Helper.getUserAnswer(3, lvKeyArea4_2);
+                    Helper.getUserAnswer(3, lvKeyArea5_1);
+                    Helper.getUserAnswer(3, lvKeyArea5_2);
+
                     fragmentTransaction.hide(environmentFragment);
                     fragmentTransaction.show(marketplaceFragment);
                     fragmentTransaction.commit();

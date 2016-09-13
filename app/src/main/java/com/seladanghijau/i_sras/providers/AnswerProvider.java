@@ -52,6 +52,7 @@ public class AnswerProvider {
         }
 
         cursor.close();
+        sqliteDB.close();
 
         return answerList; // return list of Answer objects
     }
@@ -86,6 +87,7 @@ public class AnswerProvider {
         tempAnswerObj.setAnswer(tempAnswer);
 
         cursor.close();
+        sqliteDB.close();
 
         return tempAnswerObj;
     }
@@ -127,6 +129,7 @@ public class AnswerProvider {
         }
 
         cursor.close();
+        sqliteDB.close();
 
         return answerList;
     }
@@ -172,6 +175,7 @@ public class AnswerProvider {
         }
 
         cursor.close();
+        sqliteDB.close();
 
         return answerList;
     }
@@ -217,6 +221,7 @@ public class AnswerProvider {
         }
 
         cursor.close();
+        sqliteDB.close();
 
         return answerList;
     }
@@ -271,6 +276,7 @@ public class AnswerProvider {
         }
 
         cursor.close();
+        sqliteDB.close();
 
         return answerList;
     }
@@ -279,20 +285,22 @@ public class AnswerProvider {
         SQLiteDatabase sqliteDB;
         Cursor cursor;
         String sql;
-        int tempAnswerId, tempAnswer;
+        int tempAnswer, tempAnswerCategory, tempSoalanNo;
 
         sqliteDB = SQLiteDatabase.openDatabase(DBHelper.DB_PATH, null, SQLiteDatabase.OPEN_READWRITE); // open database
 
         // extract data from Answer obj
-        tempAnswerId = answer.getAnswerId();
         tempAnswer = answer.getAnswer() ? 1 : 0;
+        tempAnswerCategory = answer.getAnswerCategory();
+        tempSoalanNo = answer.getSoalanNo();
 
         // sql query
-        sql = "INSERT INTO Answer\n" +
-                "VALUES('" + tempAnswerId + "', '" + tempAnswer + "');";
+        sql = "INSERT INTO Answer('answer', 'answerCategory', 'soalanNo') " +
+                "VALUES('" + tempAnswer + "', '" + tempAnswerCategory + "', '" + tempSoalanNo + "');";
         cursor = sqliteDB.rawQuery(sql, null); // return queried data in cursor
 
         cursor.close();
+        sqliteDB.close();
 
         return true;
     }
@@ -311,6 +319,7 @@ public class AnswerProvider {
         cursor = sqliteDB.rawQuery(sql, null); // return queried data in cursor
 
         cursor.close();
+        sqliteDB.close();
 
         return true;
     }
@@ -323,11 +332,11 @@ public class AnswerProvider {
         sqliteDB = SQLiteDatabase.openDatabase(DBHelper.DB_PATH, null, SQLiteDatabase.OPEN_READWRITE); // open database
 
         // sql query
-        sql = "DELETE * " +
-                "FROM Answer";
+        sql = "DELETE FROM Answer";
         cursor = sqliteDB.rawQuery(sql, null); // return queried data in cursor
 
         cursor.close();
+        sqliteDB.close();
 
         return true;
     }
