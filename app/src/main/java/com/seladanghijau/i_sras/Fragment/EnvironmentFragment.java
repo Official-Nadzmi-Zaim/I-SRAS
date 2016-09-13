@@ -8,18 +8,120 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 
 import com.seladanghijau.i_sras.R;
+import com.seladanghijau.i_sras.adapter.SoalanAdapter;
+import com.seladanghijau.i_sras.dtos.Answer;
+import com.seladanghijau.i_sras.dtos.Soalan;
+import com.seladanghijau.i_sras.helper.Helper;
+import com.seladanghijau.i_sras.providers.SoalanProvider;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class EnvironmentFragment extends Fragment {
 
     Fragment workplaceFragment, environmentFragment, marketplaceFragment;
     Button btnPreviousE, btnNextE;
+    List<Soalan> soalanList, soalanList2, soalanList3, soalanList4, soalanList5, soalanList6, soalanList7, soalanList8, soalanList9, soalanList10, soalanList11, soalanList12, soalanList13;
+    ListView lvKeyArea1_1, lvKeyArea2_1,lvKeyArea2_2, lvKeyArea2_3, lvKeyArea2_4, lvKeyArea2_5, lvKeyArea2_6, lvKeyArea3_1, lvKeyArea3_2, lvKeyArea4_1, lvKeyArea4_2, lvKeyArea5_1, lvKeyArea5_2;
+    SoalanAdapter soalanAdapter, soalanAdapter2, soalanAdapter3, soalanAdapter4, soalanAdapter5, soalanAdapter6, soalanAdapter7, soalanAdapter8, soalanAdapter9, soalanAdapter10, soalanAdapter11, soalanAdapter12, soalanAdapter13;
+    List<Answer> answerList, answerList2, answerList3, answerList4, answerList5, answerList6, answerList7, answerList8, answerList9, answerList10, answerList11, answerList12, answerList13;
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Dalam ini untuk apa apa code selain set listener dgn findviewbyid
+        answerList = new ArrayList<>();
+        answerList2 = new ArrayList<>();
+        answerList3 = new ArrayList<>();
+        answerList4 = new ArrayList<>();
+        answerList5 = new ArrayList<>();
+        answerList6 = new ArrayList<>();
+        answerList7 = new ArrayList<>();
+        answerList8 = new ArrayList<>();
+        answerList9 = new ArrayList<>();
+        answerList10 = new ArrayList<>();
+        answerList11 = new ArrayList<>();
+        answerList12 = new ArrayList<>();
+        answerList13 = new ArrayList<>();
+
+        soalanList = new ArrayList<>();
+        soalanList2 = new ArrayList<>();
+        soalanList3 = new ArrayList<>();
+        soalanList4 = new ArrayList<>();
+        soalanList5 = new ArrayList<>();
+        soalanList6 = new ArrayList<>();
+        soalanList7 = new ArrayList<>();
+        soalanList8 = new ArrayList<>();
+        soalanList9 = new ArrayList<>();
+        soalanList10 = new ArrayList<>();
+        soalanList11 = new ArrayList<>();
+        soalanList12 = new ArrayList<>();
+        soalanList13 = new ArrayList<>();
+
+        //soalanList = SoalanProvider.loadSoalanBasedOnCategory(1);
+        soalanList = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 1, 1);
+        soalanList2 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 2, 2);
+        soalanList3 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 3, 8);
+        soalanList4 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 9, 9);
+        soalanList5 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 10, 11);
+        soalanList6 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 12, 12);
+        soalanList7 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 13, 13);
+        soalanList8 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 14, 15);
+        soalanList9 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 16, 16);
+        soalanList10 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 17, 18);
+        soalanList11 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 19, 19);
+        soalanList12 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 20, 20);
+        soalanList13 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(3, 21, 21);
+
+
+        //answerlist
+        answerList = CreateAnswer(soalanList);
+        answerList2 = CreateAnswer(soalanList2);
+        answerList3 = CreateAnswer(soalanList3);
+        answerList4 = CreateAnswer(soalanList4);
+        answerList5 = CreateAnswer(soalanList5);
+        answerList6 = CreateAnswer(soalanList6);
+        answerList7 = CreateAnswer(soalanList7);
+        answerList8 = CreateAnswer(soalanList8);
+        answerList9 = CreateAnswer(soalanList9);
+        answerList10 = CreateAnswer(soalanList10);
+        answerList11 = CreateAnswer(soalanList11);
+        answerList12 = CreateAnswer(soalanList12);
+        answerList13 = CreateAnswer(soalanList13);
+
+
+        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList, answerList);
+        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList2, answerList2);
+        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList3, answerList3);
+        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList4, answerList4);
+        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList5, answerList5);
+        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList6, answerList6);
+        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList7, answerList7);
+        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList8, answerList8);
+        soalanAdapter9 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList9, answerList9);
+        soalanAdapter10 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList10, answerList10);
+        soalanAdapter11 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList11, answerList11);
+        soalanAdapter12 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList12, answerList12);
+        soalanAdapter13 = new SoalanAdapter(getActivity(), R.layout.soalanlistitem, soalanList13, answerList13);
+
+        soalanAdapter.notifyDataSetChanged();
+        soalanAdapter2.notifyDataSetChanged();
+        soalanAdapter3.notifyDataSetChanged();
+        soalanAdapter4.notifyDataSetChanged();
+        soalanAdapter5.notifyDataSetChanged();
+        soalanAdapter6.notifyDataSetChanged();
+        soalanAdapter7.notifyDataSetChanged();
+        soalanAdapter8.notifyDataSetChanged();
+        soalanAdapter9.notifyDataSetChanged();
+        soalanAdapter10.notifyDataSetChanged();
+        soalanAdapter11.notifyDataSetChanged();
+        soalanAdapter12.notifyDataSetChanged();
+        soalanAdapter13.notifyDataSetChanged();
     }
 
     @Nullable
@@ -36,6 +138,48 @@ public class EnvironmentFragment extends Fragment {
         environmentFragment = getFragmentManager().findFragmentById(R.id.EnvironmentFragment);
         marketplaceFragment = getFragmentManager().findFragmentById(R.id.MarketplaceFragment);
         workplaceFragment = getFragmentManager().findFragmentById(R.id.WorkplaceFragment);
+
+        lvKeyArea1_1 = (ListView) getActivity().findViewById(R.id.lvKeyArea1_1_1b);
+        lvKeyArea2_1 = (ListView) getActivity().findViewById(R.id.lvKeyArea2_1_2b);
+        lvKeyArea2_2 = (ListView) getActivity().findViewById(R.id.lvKeyArea2_2_3b);
+        lvKeyArea2_3 = (ListView) getActivity().findViewById(R.id.lvKeyArea2_3_4b);
+        lvKeyArea2_4 = (ListView) getActivity().findViewById(R.id.lvKeyArea2_4_5b);
+        lvKeyArea2_5 = (ListView) getActivity().findViewById(R.id.lvKeyArea2_5_6b);
+        lvKeyArea2_6 = (ListView) getActivity().findViewById(R.id.lvKeyArea2_6_7b);
+        lvKeyArea3_1 = (ListView) getActivity().findViewById(R.id.lvKeyArea3_1_8b);
+        lvKeyArea3_2 = (ListView) getActivity().findViewById(R.id.lvKeyArea3_2_9b);
+        lvKeyArea4_1 = (ListView) getActivity().findViewById(R.id.lvKeyArea4_1_10b);
+        lvKeyArea4_2 = (ListView) getActivity().findViewById(R.id.lvKeyArea4_2_11b);
+        lvKeyArea5_1 = (ListView) getActivity().findViewById(R.id.lvKeyArea5_1_12b);
+        lvKeyArea5_2 = (ListView) getActivity().findViewById(R.id.lvKeyArea5_2_13b);
+
+        lvKeyArea1_1.setAdapter(soalanAdapter);
+        lvKeyArea2_1.setAdapter(soalanAdapter2);
+        lvKeyArea2_2.setAdapter(soalanAdapter3);
+        lvKeyArea2_3.setAdapter(soalanAdapter4);
+        lvKeyArea2_4.setAdapter(soalanAdapter5);
+        lvKeyArea2_5.setAdapter(soalanAdapter6);
+        lvKeyArea2_6.setAdapter(soalanAdapter7);
+        lvKeyArea3_1.setAdapter(soalanAdapter8);
+        lvKeyArea3_2.setAdapter(soalanAdapter9);
+        lvKeyArea4_1.setAdapter(soalanAdapter10);
+        lvKeyArea4_2.setAdapter(soalanAdapter11);
+        lvKeyArea5_1.setAdapter(soalanAdapter12);
+        lvKeyArea5_2.setAdapter(soalanAdapter13);
+
+        Helper.getListViewSize(lvKeyArea1_1, 1);
+        Helper.getListViewSize(lvKeyArea2_1, 2);
+        Helper.getListViewSize(lvKeyArea2_2, 1);
+        Helper.getListViewSize(lvKeyArea2_3, 5);
+        Helper.getListViewSize(lvKeyArea2_4, 4);
+        Helper.getListViewSize(lvKeyArea2_5, 5);
+        Helper.getListViewSize(lvKeyArea2_6, 5);
+        Helper.getListViewSize(lvKeyArea3_1, 5);
+        Helper.getListViewSize(lvKeyArea3_2, 5);
+        Helper.getListViewSize(lvKeyArea4_1, 2);
+        Helper.getListViewSize(lvKeyArea4_2, 2);
+        Helper.getListViewSize(lvKeyArea5_1, 5);
+        Helper.getListViewSize(lvKeyArea5_2, 3);
 
         btnPreviousE = (Button) getActivity().findViewById(R.id.btnPreviousE);
         btnNextE = (Button) getActivity().findViewById(R.id.btnNextE);
@@ -64,5 +208,20 @@ public class EnvironmentFragment extends Fragment {
                     break;
             }
         }
+    }
+
+    //Create answer list based on soalan id
+    public List<Answer> CreateAnswer(List<Soalan> soalanList){
+
+        List<Answer> answerList = new ArrayList<>();
+
+        for (int i=0; i<soalanList.size(); i++){
+            Answer answer = new Answer();
+            answer.setAnswerId(soalanList.get(i).getSoalanId());
+
+            answerList.add(answer);
+        }
+
+        return answerList;
     }
 }

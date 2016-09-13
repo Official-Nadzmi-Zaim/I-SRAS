@@ -41,8 +41,10 @@
                 android:text="@string/environmental_key_area_1_title_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea1_1"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea1_1_1b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -56,8 +58,10 @@
                 android:text="@string/environmental_key_area_2_title_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea2_1"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea2_1_2b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -65,8 +69,10 @@
                 android:text="@string/environmental_key_area_2_title_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea2_2"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea2_2_3b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -74,8 +80,10 @@
                 android:text="@string/environmental_key_area_2_title_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea2_3"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea2_3_4b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -83,8 +91,10 @@
                 android:text="@string/environmental_key_area_2_title_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea2_4"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea2_4_5b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -92,8 +102,10 @@
                 android:text="@string/environmental_key_area_2_title_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea2_5"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea2_5_6b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -101,8 +113,10 @@
                 android:text="@string/environmental_key_area_2_title_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea2_6"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea2_6_7b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -116,8 +130,10 @@
                 android:text="@string/environmental_key_area_3_title_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea3_1"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea3_1_8b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -125,8 +141,10 @@
                 android:text="@string/environmental_key_area_3_title_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea3_2"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea3_2_9b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -140,8 +158,10 @@
                 android:text="@string/environmental_key_area_4_title_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea4_1"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea4_1_10b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -149,8 +169,10 @@
                 android:text="@string/environmental_key_area_4_title_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea4_2"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea4_2_11b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -164,8 +186,10 @@
                 android:text="@string/environmental_key_area_5_title_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea5_1"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea5_1_12b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -173,8 +197,10 @@
                 android:text="@string/environmental_key_area_5_title_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
             <ListView
-                android:id="@+id/lvKeyArea5_2"
+                android:scrollbars="none"
+                android:id="@+id/lvKeyArea5_2_13b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>

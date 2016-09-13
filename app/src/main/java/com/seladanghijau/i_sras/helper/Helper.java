@@ -36,6 +36,10 @@ public class Helper {
             extraHeight = 25;
         }else if (typeSize==3){
             extraHeight = 55;
+        }else if (typeSize==4){
+            extraHeight = 70;
+        }else if (typeSize==5){
+            extraHeight = 130;
         }
 
         for (int size=0; size<listAdapter.getCount(); size++){
