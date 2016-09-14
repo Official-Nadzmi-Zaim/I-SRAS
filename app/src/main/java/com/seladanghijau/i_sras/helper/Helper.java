@@ -57,11 +57,13 @@ public class Helper {
         Log.d("adapter", ""+adapter.getCount());
 
         int totalHeight=0;
+        int lsize = 112 * adapter.getCount();
 
         for (int i=0; i<lines; i++){
-            totalHeight += 50;
+            totalHeight += 10;
         }
 
+        totalHeight += lsize;
 
         ViewGroup.LayoutParams params = listView.getLayoutParams();
         params.height = totalHeight + (listView.getDividerHeight() * (adapter.getCount()-1));
