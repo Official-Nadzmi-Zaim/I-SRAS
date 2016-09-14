@@ -1,16 +1,20 @@
 package com.seladanghijau.i_sras.adapter;
 
 import android.content.Context;
+import android.os.AsyncTask;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.seladanghijau.i_sras.R;
 import com.seladanghijau.i_sras.dtos.Answer;
 import com.seladanghijau.i_sras.dtos.Soalan;
+import com.seladanghijau.i_sras.helper.Helper;
 
 import java.util.List;
 
@@ -20,18 +24,22 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
     List<Answer> answerList;
     Context context;
     int layoutResourceId;
+    int total=0;
+    int count=0;
+    ListView listView;
 
-    public SoalanAdapter(Context context, int layoutResourceId, List<Soalan> soalanList, List<Answer> answerList) {
+    public SoalanAdapter(Context context, int layoutResourceId, List<Soalan> soalanList, List<Answer> answerList, ListView listView) {
         super(context, layoutResourceId, soalanList);
         this.layoutResourceId = layoutResourceId;
         this.context = context;
         this.soalanList = soalanList;
         this.answerList = answerList;
+        this.listView = listView;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder viewHolder;
+        final ViewHolder viewHolder;
 
         if (convertView==null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -63,6 +71,17 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
                 viewHolder.btn2.setVisibility(View.VISIBLE);
                 viewHolder.btn2.setOnClickListener(new OnClick(position, viewHolder));
             }
+
+            viewHolder.question.post(new Runnable() {
+                @Override
+                public void run() {
+                    //asynctask
+                    int lines = viewHolder.question.getLineCount();
+
+                    total(lines);
+                }
+            });
+
         }
         return  convertView;
     }
@@ -70,6 +89,20 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
     static class ViewHolder{
         TextView id, question;
         Button btn1, btn2;
+    }
+
+    private void total(int lines){
+
+        if (count<soalanList.size()){
+            total += lines;
+
+            if (count == (soalanList.size()-1)){
+                Log.d("Total", ""+total);
+                Helper.realHeight(total, listView);
+            }
+        }
+
+        count++;
     }
 
     private class OnClick implements View.OnClickListener{

@@ -104,36 +104,6 @@ public class WorkplaceFragment extends Fragment {
         answerList13 = CreateAnswer(soalanList13);
         answerList14 = CreateAnswer(soalanList14);
 
-
-        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList, answerList);
-        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList2, answerList2);
-        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList3, answerList3);
-        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList4, answerList4);
-        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList5, answerList5);
-        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList6, answerList6);
-        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList7, answerList7);
-        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList8, answerList8);
-        soalanAdapter9 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList9, answerList9);
-        soalanAdapter10 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList10, answerList10);
-        soalanAdapter11 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList11, answerList11);
-        soalanAdapter12 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList12, answerList12);
-        soalanAdapter13 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList13, answerList13);
-        soalanAdapter14 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList14, answerList14);
-
-        soalanAdapter.notifyDataSetChanged();
-        soalanAdapter2.notifyDataSetChanged();
-        soalanAdapter3.notifyDataSetChanged();
-        soalanAdapter4.notifyDataSetChanged();
-        soalanAdapter5.notifyDataSetChanged();
-        soalanAdapter6.notifyDataSetChanged();
-        soalanAdapter7.notifyDataSetChanged();
-        soalanAdapter8.notifyDataSetChanged();
-        soalanAdapter9.notifyDataSetChanged();
-        soalanAdapter10.notifyDataSetChanged();
-        soalanAdapter11.notifyDataSetChanged();
-        soalanAdapter12.notifyDataSetChanged();
-        soalanAdapter13.notifyDataSetChanged();
-        soalanAdapter14.notifyDataSetChanged();
     }
 
     @Nullable
@@ -166,6 +136,51 @@ public class WorkplaceFragment extends Fragment {
         lvKeyArea6_1 = (ListView) getActivity().findViewById(R.id.lvKeyArea6_1_13a);
         lvKeyArea6_2 = (ListView) getActivity().findViewById(R.id.lvKeyArea6_2_14a);
 
+        Helper.getListViewSize(lvKeyArea1_1);
+        Helper.getListViewSize(lvKeyArea1_2);
+        Helper.getListViewSize(lvKeyArea1_3);
+        Helper.getListViewSize(lvKeyArea2_1);
+        Helper.getListViewSize(lvKeyArea3_1);
+        Helper.getListViewSize(lvKeyArea4_1);
+        Helper.getListViewSize(lvKeyArea4_2);
+        Helper.getListViewSize(lvKeyArea4_3);
+        Helper.getListViewSize(lvKeyArea4_4);
+        Helper.getListViewSize(lvKeyArea5_1);
+        Helper.getListViewSize(lvKeyArea5_2);
+        Helper.getListViewSize(lvKeyArea5_3);
+        Helper.getListViewSize(lvKeyArea6_1);
+        Helper.getListViewSize(lvKeyArea6_2);
+
+        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList, answerList, lvKeyArea1_1);
+        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList2, answerList2, lvKeyArea1_2);
+        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList3, answerList3, lvKeyArea1_3);
+        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList4, answerList4, lvKeyArea2_1);
+        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList5, answerList5, lvKeyArea3_1);
+        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList6, answerList6, lvKeyArea4_1);
+        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList7, answerList7, lvKeyArea4_2);
+        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList8, answerList8, lvKeyArea4_3);
+        soalanAdapter9 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList9, answerList9, lvKeyArea4_4);
+        soalanAdapter10 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList10, answerList10, lvKeyArea5_1);
+        soalanAdapter11 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList11, answerList11, lvKeyArea5_2);
+        soalanAdapter12 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList12, answerList12, lvKeyArea5_3);
+        soalanAdapter13 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList13, answerList13, lvKeyArea6_1);
+        soalanAdapter14 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList14, answerList14, lvKeyArea6_2);
+
+        soalanAdapter.notifyDataSetChanged();
+        soalanAdapter2.notifyDataSetChanged();
+        soalanAdapter3.notifyDataSetChanged();
+        soalanAdapter4.notifyDataSetChanged();
+        soalanAdapter5.notifyDataSetChanged();
+        soalanAdapter6.notifyDataSetChanged();
+        soalanAdapter7.notifyDataSetChanged();
+        soalanAdapter8.notifyDataSetChanged();
+        soalanAdapter9.notifyDataSetChanged();
+        soalanAdapter10.notifyDataSetChanged();
+        soalanAdapter11.notifyDataSetChanged();
+        soalanAdapter12.notifyDataSetChanged();
+        soalanAdapter13.notifyDataSetChanged();
+        soalanAdapter14.notifyDataSetChanged();
+
         lvKeyArea1_1.setAdapter(soalanAdapter);
         lvKeyArea1_2.setAdapter(soalanAdapter2);
         lvKeyArea1_3.setAdapter(soalanAdapter3);
@@ -181,20 +196,6 @@ public class WorkplaceFragment extends Fragment {
         lvKeyArea6_1.setAdapter(soalanAdapter13);
         lvKeyArea6_2.setAdapter(soalanAdapter14);
 
-        Helper.getListViewSize(lvKeyArea1_1);
-        Helper.getListViewSize(lvKeyArea1_2);
-        Helper.getListViewSize(lvKeyArea1_3);
-        Helper.getListViewSize(lvKeyArea2_1);
-        Helper.getListViewSize(lvKeyArea3_1);
-        Helper.getListViewSize(lvKeyArea4_1);
-        Helper.getListViewSize(lvKeyArea4_2);
-        Helper.getListViewSize(lvKeyArea4_3);
-        Helper.getListViewSize(lvKeyArea4_4);
-        Helper.getListViewSize(lvKeyArea5_1);
-        Helper.getListViewSize(lvKeyArea5_2);
-        Helper.getListViewSize(lvKeyArea5_3);
-        Helper.getListViewSize(lvKeyArea6_1);
-        Helper.getListViewSize(lvKeyArea6_2);
 
         btnPreviousW = (Button) getActivity().findViewById(R.id.btnPreviousW);
         btnNextW = (Button) getActivity().findViewById(R.id.btnNextW);

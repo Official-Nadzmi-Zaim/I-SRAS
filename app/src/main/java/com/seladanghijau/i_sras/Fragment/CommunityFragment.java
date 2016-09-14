@@ -81,25 +81,6 @@ public class CommunityFragment extends Fragment {
         answerList8 = CreateAnswer(soalanList8);
         answerList9 = CreateAnswer(soalanList9);
 
-        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList, answerList);
-        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList2, answerList2);
-        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList3, answerList3);
-        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList4, answerList4);
-        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList5, answerList5);
-        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList6, answerList6);
-        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList7, answerList7);
-        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList8, answerList8);
-        soalanAdapter9 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList9, answerList9);
-
-        soalanAdapter.notifyDataSetChanged();
-        soalanAdapter2.notifyDataSetChanged();
-        soalanAdapter3.notifyDataSetChanged();
-        soalanAdapter4.notifyDataSetChanged();
-        soalanAdapter5.notifyDataSetChanged();
-        soalanAdapter6.notifyDataSetChanged();
-        soalanAdapter7.notifyDataSetChanged();
-        soalanAdapter8.notifyDataSetChanged();
-        soalanAdapter9.notifyDataSetChanged();
     }
 
     @Nullable
@@ -127,16 +108,6 @@ public class CommunityFragment extends Fragment {
         lvKeyArea3_2 = (ListView) getActivity().findViewById(R.id.lvKeyArea3_2);
         lvKeyArea4_1 = (ListView) getActivity().findViewById(R.id.lvKeyArea4_1);
 
-        lvKeyArea1_1.setAdapter(soalanAdapter);
-        lvKeyArea1_2.setAdapter(soalanAdapter2);
-        lvKeyArea1_3.setAdapter(soalanAdapter3);
-        lvKeyArea1_4.setAdapter(soalanAdapter4);
-        lvKeyArea1_5.setAdapter(soalanAdapter5);
-        lvKeyArea2_1.setAdapter(soalanAdapter6);
-        lvKeyArea3_1.setAdapter(soalanAdapter7);
-        lvKeyArea3_2.setAdapter(soalanAdapter8);
-        lvKeyArea4_1.setAdapter(soalanAdapter9);
-
         Helper.getListViewSize(lvKeyArea1_1);
         Helper.getListViewSize(lvKeyArea1_2);
         Helper.getListViewSize(lvKeyArea1_3);
@@ -146,6 +117,36 @@ public class CommunityFragment extends Fragment {
         Helper.getListViewSize(lvKeyArea3_1);
         Helper.getListViewSize(lvKeyArea3_2);
         Helper.getListViewSize(lvKeyArea4_1);
+
+        soalanAdapter = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList, answerList, lvKeyArea1_1);
+        soalanAdapter2 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList2, answerList2, lvKeyArea1_2);
+        soalanAdapter3 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList3, answerList3, lvKeyArea1_3);
+        soalanAdapter4 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList4, answerList4, lvKeyArea1_4);
+        soalanAdapter5 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList5, answerList5, lvKeyArea1_5);
+        soalanAdapter6 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList6, answerList6, lvKeyArea2_1);
+        soalanAdapter7 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList7, answerList7, lvKeyArea3_1);
+        soalanAdapter8 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList8, answerList8, lvKeyArea3_2);
+        soalanAdapter9 = new SoalanAdapter(getActivity(), R.layout.layout_rowview_soalan, soalanList9, answerList9, lvKeyArea4_1);
+
+        soalanAdapter.notifyDataSetChanged();
+        soalanAdapter2.notifyDataSetChanged();
+        soalanAdapter3.notifyDataSetChanged();
+        soalanAdapter4.notifyDataSetChanged();
+        soalanAdapter5.notifyDataSetChanged();
+        soalanAdapter6.notifyDataSetChanged();
+        soalanAdapter7.notifyDataSetChanged();
+        soalanAdapter8.notifyDataSetChanged();
+        soalanAdapter9.notifyDataSetChanged();
+
+        lvKeyArea1_1.setAdapter(soalanAdapter);
+        lvKeyArea1_2.setAdapter(soalanAdapter2);
+        lvKeyArea1_3.setAdapter(soalanAdapter3);
+        lvKeyArea1_4.setAdapter(soalanAdapter4);
+        lvKeyArea1_5.setAdapter(soalanAdapter5);
+        lvKeyArea2_1.setAdapter(soalanAdapter6);
+        lvKeyArea3_1.setAdapter(soalanAdapter7);
+        lvKeyArea3_2.setAdapter(soalanAdapter8);
+        lvKeyArea4_1.setAdapter(soalanAdapter9);
 
         btnPreviousC = (Button) getActivity().findViewById(R.id.btnPreviousC);
         btnNextC = (Button) getActivity().findViewById(R.id.btnNextC);
