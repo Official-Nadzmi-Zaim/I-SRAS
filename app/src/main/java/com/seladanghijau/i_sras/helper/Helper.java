@@ -42,7 +42,7 @@ public class Helper {
 
         //totalHeight += listView.getDividerHeight()*size;
         //totalHeight = totalHeight + (totalHeight/2);
-        totalHeight = 2000;
+        totalHeight = 2500;
         //setting listview item in adapter
         ViewGroup.LayoutParams params = listView.getLayoutParams();
         params.height = totalHeight ;//+ (listView.getDividerHeight() * (listAdapter.getCount()-1));
@@ -57,13 +57,8 @@ public class Helper {
         Log.d("adapter", ""+adapter.getCount());
 
         int totalHeight=0;
-        /*int lsize = 112 * adapter.getCount();
 
-        for (int i=0; i<lines; i++){
-            totalHeight += 10;
-        }*/
-
-        totalHeight = 50 * lines;
+        totalHeight = lines + 20;
 
         ViewGroup.LayoutParams params = listView.getLayoutParams();
         params.height = totalHeight + (listView.getDividerHeight() * (adapter.getCount()-1));

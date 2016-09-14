@@ -75,10 +75,9 @@ public class SoalanAdapter extends ArrayAdapter<Soalan> {
             viewHolder.question.post(new Runnable() {
                 @Override
                 public void run() {
-                    //asynctask
-                    int lines = viewHolder.question.getLineCount();
 
-                    total(lines);
+                    int measure = viewHolder.question.getHeight();
+                    total(measure);
                 }
             });
 
