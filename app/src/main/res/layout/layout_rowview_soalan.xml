@@ -16,7 +16,7 @@
 
     <com.seladanghijau.i_sras.custom.CustomTextView
         app:font="arial.ttf"
-        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
         android:padding="3dp"
         android:layout_weight="1"
         android:id="@+id/qQuestion"
