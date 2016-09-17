@@ -18,6 +18,7 @@
             android:text="@string/enviromental"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:textColor="@color/black"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -34,11 +35,16 @@
             <!-- key area 1 -->
             <TextView
                 android:text="@string/environmental_key_area_1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="@color/key_area"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/environmental_key_area_1_title_1"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -51,11 +57,16 @@
             <!-- key area 2 -->
             <TextView
                 android:text="@string/environmental_key_area_2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="@color/key_area"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/environmental_key_area_2_title_1"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -67,6 +78,8 @@
 
             <TextView
                 android:text="@string/environmental_key_area_2_title_2"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -78,6 +91,8 @@
 
             <TextView
                 android:text="@string/environmental_key_area_2_title_3"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -89,6 +104,8 @@
 
             <TextView
                 android:text="@string/environmental_key_area_2_title_4"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -100,6 +117,8 @@
 
             <TextView
                 android:text="@string/environmental_key_area_2_title_5"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -111,6 +130,8 @@
 
             <TextView
                 android:text="@string/environmental_key_area_2_title_6"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -123,11 +144,16 @@
             <!-- key area 3 -->
             <TextView
                 android:text="@string/environmental_key_area_3"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="@color/key_area"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/environmental_key_area_3_title_1"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -139,6 +165,8 @@
 
             <TextView
                 android:text="@string/environmental_key_area_3_title_2"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -151,11 +179,16 @@
             <!-- key area 4 -->
             <TextView
                 android:text="@string/environmental_key_area_4"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="@color/key_area"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/environmental_key_area_4_title_1"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -167,6 +200,8 @@
 
             <TextView
                 android:text="@string/environmental_key_area_4_title_2"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -179,11 +214,16 @@
             <!-- key area 5 -->
             <TextView
                 android:text="@string/environmental_key_area_5"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:background="@color/key_area"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:text="@string/environmental_key_area_5_title_1"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -195,6 +235,8 @@
 
             <TextView
                 android:text="@string/environmental_key_area_5_title_2"
+                android:textColor="@color/black"
+                android:background="@color/yellow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

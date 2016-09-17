@@ -74,7 +74,7 @@ public class WorkplaceFragment extends Fragment {
 
         //soalanList = SoalanProvider.loadSoalanBasedOnCategory(1);
         soalanList = SoalanProvider.loadSoalanBasedOnRangeAndCategory(2, 1, 4);
-        soalanList2 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(2, 5, 6);
+        soalanList2 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(2, 5, 7);
         soalanList3 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(2, 8, 10);
         soalanList4 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(2, 11, 15);
         soalanList5 = SoalanProvider.loadSoalanBasedOnRangeAndCategory(2, 16, 17);

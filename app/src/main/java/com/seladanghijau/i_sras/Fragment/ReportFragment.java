@@ -108,12 +108,16 @@ public class ReportFragment extends Fragment {
                 IrasScoreLevel.setText(getResources().getText(R.string.lvl_1));
                 IrasScore.setBackgroundColor(Color.GREEN);
                 IrasScoreLevel.setBackgroundColor(Color.GREEN);
+                IrasScore.setTextColor(Color.BLACK);
+                IrasScoreLevel.setTextColor(Color.BLACK);
                 break;
             case 2:
                 IrasScore.setText(String.valueOf(score.getIsrasScore()));
                 IrasScoreLevel.setText(getResources().getText(R.string.lvl_2));
                 IrasScore.setBackgroundColor(Color.YELLOW);
                 IrasScoreLevel.setBackgroundColor(Color.YELLOW);
+                IrasScore.setTextColor(Color.BLACK);
+                IrasScoreLevel.setTextColor(Color.BLACK);
                 break;
             case 3:
                 IrasScore.setText(String.valueOf(score.getIsrasScore()));
@@ -125,19 +129,23 @@ public class ReportFragment extends Fragment {
         // vital
         switch (score.getVitalLevel()) {
             case 1:
-                VitalScore.setText(String.valueOf(score.getVitalLevel()));
+                VitalScore.setText(String.valueOf(score.getVitalScore()));
                 VitalScoreLevel.setText(getResources().getText(R.string.lvl_1));
                 VitalScore.setBackgroundColor(Color.GREEN);
                 VitalScoreLevel.setBackgroundColor(Color.GREEN);
+                VitalScore.setTextColor(Color.BLACK);
+                VitalScoreLevel.setTextColor(Color.BLACK);
                 break;
             case 2:
-                VitalScore.setText(String.valueOf(score.getVitalLevel()));
+                VitalScore.setText(String.valueOf(score.getVitalScore()));
                 VitalScoreLevel.setText(getResources().getText(R.string.lvl_2));
                 VitalScore.setBackgroundColor(Color.YELLOW);
                 VitalScoreLevel.setBackgroundColor(Color.YELLOW);
+                VitalScore.setTextColor(Color.BLACK);
+                VitalScoreLevel.setTextColor(Color.BLACK);
                 break;
             case 3:
-                VitalScore.setText(String.valueOf(score.getVitalLevel()));
+                VitalScore.setText(String.valueOf(score.getVitalScore()));
                 VitalScoreLevel.setText(getResources().getText(R.string.lvl_3));
                 VitalScore.setBackgroundColor(Color.RED);
                 VitalScoreLevel.setBackgroundColor(Color.RED);
@@ -146,19 +154,23 @@ public class ReportFragment extends Fragment {
         // recommended
         switch (score.getRecommendedLevel()) {
             case 1:
-                RecommendedScore.setText(String.valueOf(score.getRecommendedLevel()));
+                RecommendedScore.setText(String.valueOf(score.getRecommendedScore()));
                 RecommendedScoreLevel.setText(getResources().getText(R.string.lvl_1));
                 RecommendedScore.setBackgroundColor(Color.GREEN);
                 RecommendedScoreLevel.setBackgroundColor(Color.GREEN);
+                RecommendedScore.setTextColor(Color.BLACK);
+                RecommendedScoreLevel.setTextColor(Color.BLACK);
                 break;
             case 2:
-                RecommendedScore.setText(String.valueOf(score.getRecommendedLevel()));
+                RecommendedScore.setText(String.valueOf(score.getRecommendedScore()));
                 RecommendedScoreLevel.setText(getResources().getText(R.string.lvl_2));
                 RecommendedScore.setBackgroundColor(Color.YELLOW);
                 RecommendedScoreLevel.setBackgroundColor(Color.YELLOW);
+                RecommendedScore.setTextColor(Color.BLACK);
+                RecommendedScoreLevel.setTextColor(Color.BLACK);
                 break;
             case 3:
-                RecommendedScore.setText(String.valueOf(score.getRecommendedLevel()));
+                RecommendedScore.setText(String.valueOf(score.getRecommendedScore()));
                 RecommendedScoreLevel.setText(getResources().getText(R.string.lvl_3));
                 RecommendedScore.setBackgroundColor(Color.RED);
                 RecommendedScoreLevel.setBackgroundColor(Color.RED);

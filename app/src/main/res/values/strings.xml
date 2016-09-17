@@ -33,7 +33,7 @@
     <string name="i_sras_score">I-SRAS SCORE</string>
     <string name="vital">VITAL</string>
     <string name="recommended">RECOMMENDED</string>
-    <string name="done">DONE</string>
+    <string name="done">EXIT</string>
     <string name="previous">Previous</string>
     <string name="next">Next</string>
 

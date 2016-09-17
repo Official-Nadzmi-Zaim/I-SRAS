@@ -63,7 +63,7 @@ public class Helper {
             View tempRowView;
             Button tempBtn2;
 
-            tempRowView = listView.getChildAt(x); // amik data drp
+            tempRowView = listView.getChildAt(x); // amik data drp listview (rowview)
             tempBtn2 = (Button) tempRowView.findViewById(R.id.qButton2); // get recommended button state
 
             // kalau salah satu button ada 'yes', return yes
