@@ -12,8 +12,10 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.seladanghijau.i_sras.R;
+import com.seladanghijau.i_sras.activities.MainActivity;
 import com.seladanghijau.i_sras.adapter.SoalanAdapter;
 import com.seladanghijau.i_sras.dtos.Answer;
+import com.seladanghijau.i_sras.dtos.Score;
 import com.seladanghijau.i_sras.dtos.Soalan;
 import com.seladanghijau.i_sras.helper.Helper;
 import com.seladanghijau.i_sras.providers.SoalanProvider;
@@ -156,18 +158,31 @@ public class MarketplaceFragment extends Fragment {
                     fragmentTransaction.commit();
                     break;
                 case R.id.btnNextM :
-                    // retrieve user's answer & store the answer into db
-                    Helper.getUserAnswer(4, lvKeyArea1_1);
-                    Helper.getUserAnswer(4, lvKeyArea2_1);
-                    Helper.getUserAnswer(4, lvKeyArea2_2);
-                    Helper.getUserAnswer(4, lvKeyArea3_1);
-                    Helper.getUserAnswer(4, lvKeyArea3_2);
-                    Helper.getUserAnswer(4, lvKeyArea3_3);
-                    Helper.getUserAnswer(4, lvKeyArea3_4);
-                    Helper.getUserAnswer(4, lvKeyArea4_1);
+                    // retrieve user's answer
+                    // access public var from parent activity
+                    ((MainActivity) getActivity()).marketplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea1_1);
+                    ((MainActivity) getActivity()).marketplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea2_1);
+                    ((MainActivity) getActivity()).marketplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea2_2);
+                    ((MainActivity) getActivity()).marketplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea3_1);
+                    ((MainActivity) getActivity()).marketplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea3_2);
+                    ((MainActivity) getActivity()).marketplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea3_3);
+                    ((MainActivity) getActivity()).marketplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea3_4);
+                    ((MainActivity) getActivity()).marketplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea4_1);
+
+                    ((MainActivity) getActivity()).marketplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea1_1);
+                    ((MainActivity) getActivity()).marketplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea2_1);
+                    ((MainActivity) getActivity()).marketplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea2_2);
+                    ((MainActivity) getActivity()).marketplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea3_1);
+                    ((MainActivity) getActivity()).marketplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea3_2);
+                    ((MainActivity) getActivity()).marketplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea3_3);
+                    ((MainActivity) getActivity()).marketplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea3_4);
+                    ((MainActivity) getActivity()).marketplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea4_1);
+
+                    ((MainActivity) getActivity()).score = setupScore();
 
                     fragmentTransaction.hide(marketplaceFragment);
                     fragmentTransaction.show(reportFragment);
+                    fragmentTransaction.detach(reportFragment).attach(reportFragment);
                     fragmentTransaction.commit();
                     break;
                 default:
@@ -175,6 +190,47 @@ public class MarketplaceFragment extends Fragment {
             }
         }
     }
+
+    // util methods --------------------------------------------------------------------------------
+    private Score setupScore() {
+        Score tempScore;
+        int communityVital, workplaceVital, environmentVital, marketplaceVital;
+        int communityRecommended, workplaceRecommended, environmentRecommended, marketplaceRecommended;
+        int isras, vital, recommended;
+
+        communityVital = ((MainActivity) getActivity()).communityVitalCount * 3;
+        workplaceVital = ((MainActivity) getActivity()).workplaceVitalCount * 3;
+        environmentVital = ((MainActivity) getActivity()).environmentalVitalCount * 3;
+        marketplaceVital = ((MainActivity) getActivity()).marketplaceVitalCount * 3;
+
+        communityRecommended = ((MainActivity) getActivity()).communityRecommendedCount;
+        workplaceRecommended = ((MainActivity) getActivity()).workplaceRecommendedCount;
+        environmentRecommended = ((MainActivity) getActivity()).environmentalRecommendedCount;
+        marketplaceRecommended = ((MainActivity) getActivity()).marketplaceRecommendedCount;
+
+        vital = communityVital + workplaceVital + environmentVital + marketplaceVital;
+        recommended = communityRecommended + workplaceRecommended + environmentRecommended + marketplaceRecommended;
+        isras = vital + recommended;
+
+        tempScore = new Score();
+        tempScore.setCommunityVitalScore(communityVital);
+        tempScore.setWorkplaceVitalScore(workplaceVital);
+        tempScore.setEnvironmentVitalScore(environmentVital);
+        tempScore.setMarketplaceVitalScore(marketplaceVital);
+        tempScore.setCommunityRecommendedScore(communityRecommended);
+        tempScore.setWorkplaceRecommendedScore(workplaceRecommended);
+        tempScore.setEnvironmentRecommendedScore(environmentRecommended);
+        tempScore.setMarketplaceRecommendedScore(marketplaceRecommended);
+        tempScore.setIsrasScore(isras);
+        tempScore.setVitalScore(vital);
+        tempScore.setRecommendedScore(recommended);
+        tempScore.setIsrasLevel(tempScore.calculateISRASLevel(tempScore.getIsrasScore()));
+        tempScore.setVitalLevel(tempScore.calculateVitalLevel(tempScore.getVitalScore()));
+        tempScore.setRecommendedLevel(tempScore.calculateRecommendedLevel(tempScore.getRecommendedScore()));
+
+        return tempScore;
+    }
+    // ---------------------------------------------------------------------------------------------
 
     //Create answer list based on soalan id
     public List<Answer> CreateAnswer(List<Soalan> soalanList){

@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.seladanghijau.i_sras.R;
+import com.seladanghijau.i_sras.activities.MainActivity;
 import com.seladanghijau.i_sras.adapter.SoalanAdapter;
 import com.seladanghijau.i_sras.dtos.Answer;
 import com.seladanghijau.i_sras.dtos.Soalan;
@@ -168,15 +169,25 @@ public class CommunityFragment extends Fragment {
                     break;
                 case R.id.btnNextC :
                     // retrieve user's answer & store the answer into db
-                    Helper.getUserAnswer(1, lvKeyArea1_1);
-                    Helper.getUserAnswer(1, lvKeyArea1_2);
-                    Helper.getUserAnswer(1, lvKeyArea1_3);
-                    Helper.getUserAnswer(1, lvKeyArea1_4);
-                    Helper.getUserAnswer(1, lvKeyArea1_5);
-                    Helper.getUserAnswer(1, lvKeyArea2_1);
-                    Helper.getUserAnswer(1, lvKeyArea3_1);
-                    Helper.getUserAnswer(1, lvKeyArea3_2);
-                    Helper.getUserAnswer(1, lvKeyArea4_1);
+                    ((MainActivity) getActivity()).communityVitalCount += Helper.getUserAnswerVital(lvKeyArea1_1);
+                    ((MainActivity) getActivity()).communityVitalCount += Helper.getUserAnswerVital(lvKeyArea1_2);
+                    ((MainActivity) getActivity()).communityVitalCount += Helper.getUserAnswerVital(lvKeyArea1_3);
+                    ((MainActivity) getActivity()).communityVitalCount += Helper.getUserAnswerVital(lvKeyArea1_4);
+                    ((MainActivity) getActivity()).communityVitalCount += Helper.getUserAnswerVital(lvKeyArea1_5);
+                    ((MainActivity) getActivity()).communityVitalCount += Helper.getUserAnswerVital(lvKeyArea2_1);
+                    ((MainActivity) getActivity()).communityVitalCount += Helper.getUserAnswerVital(lvKeyArea3_1);
+                    ((MainActivity) getActivity()).communityVitalCount += Helper.getUserAnswerVital(lvKeyArea3_2);
+                    ((MainActivity) getActivity()).communityVitalCount += Helper.getUserAnswerVital(lvKeyArea4_1);
+
+                    ((MainActivity) getActivity()).communityRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea1_1);
+                    ((MainActivity) getActivity()).communityRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea1_2);
+                    ((MainActivity) getActivity()).communityRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea1_3);
+                    ((MainActivity) getActivity()).communityRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea1_4);
+                    ((MainActivity) getActivity()).communityRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea1_5);
+                    ((MainActivity) getActivity()).communityRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea2_1);
+                    ((MainActivity) getActivity()).communityRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea3_1);
+                    ((MainActivity) getActivity()).communityRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea3_2);
+                    ((MainActivity) getActivity()).communityRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea4_1);
 
                     fragmentTransaction.hide(communityFragment);
                     fragmentTransaction.show(workplaceFragment);

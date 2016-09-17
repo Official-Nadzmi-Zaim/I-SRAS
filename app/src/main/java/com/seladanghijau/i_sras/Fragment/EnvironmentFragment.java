@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.seladanghijau.i_sras.R;
+import com.seladanghijau.i_sras.activities.MainActivity;
 import com.seladanghijau.i_sras.adapter.SoalanAdapter;
 import com.seladanghijau.i_sras.dtos.Answer;
 import com.seladanghijau.i_sras.dtos.Soalan;
@@ -201,20 +202,35 @@ public class EnvironmentFragment extends Fragment {
                     fragmentTransaction.commit();
                     break;
                 case R.id.btnNextE :
-                    // retrieve user's answer & store the answer into db
-                    Helper.getUserAnswer(3, lvKeyArea1_1);
-                    Helper.getUserAnswer(3, lvKeyArea2_1);
-                    Helper.getUserAnswer(3, lvKeyArea2_2);
-                    Helper.getUserAnswer(3, lvKeyArea2_3);
-                    Helper.getUserAnswer(3, lvKeyArea2_4);
-                    Helper.getUserAnswer(3, lvKeyArea2_5);
-                    Helper.getUserAnswer(3, lvKeyArea2_6);
-                    Helper.getUserAnswer(3, lvKeyArea3_1);
-                    Helper.getUserAnswer(3, lvKeyArea3_2);
-                    Helper.getUserAnswer(3, lvKeyArea4_1);
-                    Helper.getUserAnswer(3, lvKeyArea4_2);
-                    Helper.getUserAnswer(3, lvKeyArea5_1);
-                    Helper.getUserAnswer(3, lvKeyArea5_2);
+                    // retrieve user's answer
+                    // access public var from parent activity
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea1_1);
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea2_1);
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea2_2);
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea2_3);
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea2_4);
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea2_5);
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea2_6);
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea3_1);
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea3_2);
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea4_1);
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea4_2);
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea5_1);
+                    ((MainActivity) getActivity()).environmentalVitalCount += Helper.getUserAnswerVital(lvKeyArea5_2);
+
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea1_1);
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea2_1);
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea2_2);
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea2_3);
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea2_4);
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea2_5);
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea2_6);
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea3_1);
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea3_2);
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea4_1);
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea4_2);
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea5_1);
+                    ((MainActivity) getActivity()).environmentalRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea5_2);
 
                     fragmentTransaction.hide(environmentFragment);
                     fragmentTransaction.show(marketplaceFragment);

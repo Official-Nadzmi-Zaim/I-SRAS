@@ -112,4 +112,9 @@
 
     <string name="no">No</string>
     <string name="yes">Yes</string>
+
+    <!-- SCORE LEVEL -->
+    <string name="lvl_1">HIGH</string>
+    <string name="lvl_2">MEDIUM</string>
+    <string name="lvl_3">LOW</string>
 </resources>

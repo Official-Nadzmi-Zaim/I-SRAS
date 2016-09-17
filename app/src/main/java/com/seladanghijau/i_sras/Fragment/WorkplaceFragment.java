@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.seladanghijau.i_sras.R;
+import com.seladanghijau.i_sras.activities.MainActivity;
 import com.seladanghijau.i_sras.adapter.SoalanAdapter;
 import com.seladanghijau.i_sras.dtos.Answer;
 import com.seladanghijau.i_sras.dtos.Soalan;
@@ -216,21 +217,37 @@ public class WorkplaceFragment extends Fragment {
                     fragmentTransaction.commit();
                     break;
                 case R.id.btnNextW :
-                    // retrieve user's answer & store the answer into db
-                    Helper.getUserAnswer(2, lvKeyArea1_1);
-                    Helper.getUserAnswer(2, lvKeyArea1_2);
-                    Helper.getUserAnswer(2, lvKeyArea1_3);
-                    Helper.getUserAnswer(2, lvKeyArea2_1);
-                    Helper.getUserAnswer(2, lvKeyArea3_1);
-                    Helper.getUserAnswer(2, lvKeyArea4_1);
-                    Helper.getUserAnswer(2, lvKeyArea4_2);
-                    Helper.getUserAnswer(2, lvKeyArea4_3);
-                    Helper.getUserAnswer(2, lvKeyArea4_4);
-                    Helper.getUserAnswer(2, lvKeyArea5_1);
-                    Helper.getUserAnswer(2, lvKeyArea5_2);
-                    Helper.getUserAnswer(2, lvKeyArea5_3);
-                    Helper.getUserAnswer(2, lvKeyArea6_1);
-                    Helper.getUserAnswer(2, lvKeyArea6_2);
+                    // retrieve user's answer
+                    // access public var from parent activity
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea1_1);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea1_2);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea1_3);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea2_1);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea3_1);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea4_1);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea4_2);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea4_3);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea4_4);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea5_1);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea5_2);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea5_3);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea6_1);
+                    ((MainActivity) getActivity()).workplaceVitalCount += Helper.getUserAnswerVital(lvKeyArea6_2);
+
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea1_1);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea1_2);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea1_3);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea2_1);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea3_1);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea4_1);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea4_2);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea4_3);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea4_4);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea5_1);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea5_2);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea5_3);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea6_1);
+                    ((MainActivity) getActivity()).workplaceRecommendedCount += Helper.getUserAnswerRecommended(lvKeyArea6_2);
 
                     fragmentTransaction.hide(workplaceFragment);
                     fragmentTransaction.show(environmentFragment);
