@@ -35,8 +35,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <fragment android:name="com.seladanghijau.i_sras.Fragment.ReportFragment"
-        android:id="@+id/ReportFragment"
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

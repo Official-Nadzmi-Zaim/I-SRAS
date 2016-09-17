@@ -2,6 +2,7 @@ package com.seladanghijau.i_sras.Fragment;
 
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 
 import com.seladanghijau.i_sras.R;
@@ -25,7 +27,8 @@ import java.util.List;
 
 public class MarketplaceFragment extends Fragment {
 
-    Fragment environmentFragment, marketplaceFragment, reportFragment;
+    FrameLayout frame;
+    Fragment environmentFragment, marketplaceFragment;
     Button btnPreviousM, btnNextM;
     List<Soalan> soalanList, soalanList2, soalanList3, soalanList4, soalanList5, soalanList6, soalanList7, soalanList8;
     ListView lvKeyArea1_1, lvKeyArea2_1,lvKeyArea2_2, lvKeyArea3_1, lvKeyArea3_2, lvKeyArea3_3, lvKeyArea3_4, lvKeyArea4_1;
@@ -91,7 +94,7 @@ public class MarketplaceFragment extends Fragment {
         //kat sini set findviewby id dgn listener e.g Button btnNext = (Button) getActivity().findViewById(R.id.btnNext2);
         environmentFragment = getFragmentManager().findFragmentById(R.id.EnvironmentFragment);
         marketplaceFragment = getFragmentManager().findFragmentById(R.id.MarketplaceFragment);
-        reportFragment = getFragmentManager().findFragmentById(R.id.ReportFragment);
+        frame = (FrameLayout)getActivity().findViewById(R.id.content_frame);
 
         lvKeyArea1_1 = (ListView) getActivity().findViewById(R.id.lvKeyArea1_1_1c);
         lvKeyArea2_1 = (ListView) getActivity().findViewById(R.id.lvKeyArea2_1_2c);
@@ -180,10 +183,10 @@ public class MarketplaceFragment extends Fragment {
 
                     ((MainActivity) getActivity()).score = setupScore();
 
-                    fragmentTransaction.hide(marketplaceFragment);
-                    fragmentTransaction.show(reportFragment);
-                    //fragmentTransaction.detach(reportFragment).attach(reportFragment);
-                    fragmentTransaction.commit();
+                    Fragment fragment = new ReportFragment();
+                    FragmentManager fragmentManager = getFragmentManager();
+                    fragmentManager.beginTransaction().hide(marketplaceFragment).replace(R.id.content_frame, fragment).commit();
+                    frame.setVisibility(View.VISIBLE);
                     break;
                 default:
                     break;

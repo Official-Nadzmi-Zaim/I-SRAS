@@ -10,7 +10,7 @@ import com.seladanghijau.i_sras.dtos.Score;
 
 public class MainActivity extends AppCompatActivity {
     // views
-    Fragment homeFragment, communityFragment, workplaceFragment, environmentFragment, marketplaceFragment, reportFragment;
+    Fragment homeFragment, communityFragment, workplaceFragment, environmentFragment, marketplaceFragment;
 
     // vars
     public Score score;
@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         environmentFragment = getFragmentManager().findFragmentById(R.id.EnvironmentFragment);
         marketplaceFragment = getFragmentManager().findFragmentById(R.id.MarketplaceFragment);
         communityFragment = getFragmentManager().findFragmentById(R.id.CommunityFragment);
-        reportFragment = getFragmentManager().findFragmentById(R.id.ReportFragment);
 
         //Guna FragmentTransaction untuk buat fragment visible. HomeFragment je dulu kat sini
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
@@ -36,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.hide(workplaceFragment);
         fragmentTransaction.hide(environmentFragment);
         fragmentTransaction.hide(marketplaceFragment);
-        fragmentTransaction.hide(reportFragment);
         fragmentTransaction.commit();
 
         initVars();

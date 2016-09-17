@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.seladanghijau.i_sras.R;
@@ -20,8 +21,9 @@ import com.seladanghijau.i_sras.dtos.Score;
 
 public class ReportFragment extends Fragment {
 
+    FrameLayout frame;
     LinearLayout community, workplace, environmental, marketplace;
-    Fragment homeFragment, communityFragment, workplaceFragment, environmentFragment, marketplaceFragment, reportFragment;
+    Fragment homeFragment, communityFragment, workplaceFragment, environmentFragment, marketplaceFragment;
     CustomTextView txtCommunity, txtWorkplace, txtEnviromental, txtMarketplace;
     CustomTextView IrasScore, VitalScore, RecommendedScore;
     CustomTextView IrasScoreLevel, VitalScoreLevel, RecommendedScoreLevel;
@@ -51,7 +53,7 @@ public class ReportFragment extends Fragment {
         environmentFragment = getFragmentManager().findFragmentById(R.id.EnvironmentFragment);
         marketplaceFragment = getFragmentManager().findFragmentById(R.id.MarketplaceFragment);
         communityFragment = getFragmentManager().findFragmentById(R.id.CommunityFragment);
-        reportFragment = getFragmentManager().findFragmentById(R.id.ReportFragment);
+        frame = (FrameLayout) getActivity().findViewById(R.id.content_frame);
 
         txtCommunity = (CustomTextView) getActivity().findViewById(R.id.txtCommunity);
         txtWorkplace = (CustomTextView) getActivity().findViewById(R.id.txtWorkplace);
@@ -185,22 +187,22 @@ public class ReportFragment extends Fragment {
 
             switch (v.getId()){
                 case R.id.communityL:
-                    fragmentTransaction.hide(reportFragment);
+                    frame.setVisibility(View.GONE);
                     fragmentTransaction.show(communityFragment);
                     fragmentTransaction.commit();
                     break;
                 case R.id.enviromentalL:
-                    fragmentTransaction.hide(reportFragment);
+                    frame.setVisibility(View.GONE);
                     fragmentTransaction.show(environmentFragment);
                     fragmentTransaction.commit();
                     break;
                 case R.id.worplaceL:
-                    fragmentTransaction.hide(reportFragment);
+                    frame.setVisibility(View.GONE);
                     fragmentTransaction.show(workplaceFragment);
                     fragmentTransaction.commit();
                     break;
                 case R.id.marketplaceL:
-                    fragmentTransaction.hide(reportFragment);
+                    frame.setVisibility(View.GONE);
                     fragmentTransaction.show(marketplaceFragment);
                     fragmentTransaction.commit();
                     break;
@@ -209,7 +211,6 @@ public class ReportFragment extends Fragment {
                     fragmentTransaction.remove(workplaceFragment);
                     fragmentTransaction.remove(environmentFragment);
                     fragmentTransaction.remove(marketplaceFragment);
-                    fragmentTransaction.remove(reportFragment);
                     fragmentTransaction.commit();
                     getActivity().finish();
                     break;
