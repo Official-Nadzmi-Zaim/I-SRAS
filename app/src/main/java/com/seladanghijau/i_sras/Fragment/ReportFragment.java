@@ -1,6 +1,7 @@
 package com.seladanghijau.i_sras.Fragment;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -204,6 +205,12 @@ public class ReportFragment extends Fragment {
                     fragmentTransaction.commit();
                     break;
                 case R.id.btnDone:
+                    fragmentTransaction.remove(communityFragment);
+                    fragmentTransaction.remove(workplaceFragment);
+                    fragmentTransaction.remove(environmentFragment);
+                    fragmentTransaction.remove(marketplaceFragment);
+                    fragmentTransaction.remove(reportFragment);
+                    fragmentTransaction.commit();
                     getActivity().finish();
                     break;
                 default:

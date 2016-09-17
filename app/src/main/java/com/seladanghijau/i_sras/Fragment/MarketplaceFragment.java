@@ -182,7 +182,7 @@ public class MarketplaceFragment extends Fragment {
 
                     fragmentTransaction.hide(marketplaceFragment);
                     fragmentTransaction.show(reportFragment);
-                    fragmentTransaction.detach(reportFragment).attach(reportFragment);
+                    //fragmentTransaction.detach(reportFragment).attach(reportFragment);
                     fragmentTransaction.commit();
                     break;
                 default:
