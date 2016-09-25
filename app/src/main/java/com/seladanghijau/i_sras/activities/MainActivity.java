@@ -1,7 +1,10 @@
 package com.seladanghijau.i_sras.activities;
 
+import android.app.Application;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.support.multidex.MultiDex;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import com.seladanghijau.i_sras.R;
